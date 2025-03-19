@@ -1,26 +1,14 @@
-import { FaArrowRight } from "react-icons/fa"
-import { MdOutlineShoppingCart } from "react-icons/md"
+import { FaArrowRight } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const ShopMain = () => {
 
     const featuredCategories = [
-        {
-            name: 'Filtros',
-            image: '/categories--filter.webp'
-        },
-        {
-            name: 'Eléctrico',
-            image: '/categories--electronic.webp'
-        },
-        {
-            name: 'Frenos',
-            image: '/categories--brake.webp'
-        },
-        {
-            name: 'Suspensión',
-            image: '/categories--suspension.webp'
-        }
-    ]
+        { name: 'Filtros', image: '/categories--filter.webp' },
+        { name: 'Eléctrico', image: '/categories--electronic.webp' },
+        { name: 'Frenos', image: '/categories--brake.webp' },
+        { name: 'Suspensión', image: '/categories--suspension.webp' }
+    ];
 
     const featuredParts = [
         {
@@ -28,7 +16,6 @@ const ShopMain = () => {
             category: "Filtros",
             quality: "Premium",
             popularity: "Más Vendido",
-            price: 140.99,
             image: "/filter--AceitePremiumx500.png"
         },
         {
@@ -36,7 +23,6 @@ const ShopMain = () => {
             category: "Eléctrico",
             quality: "Reforzado",
             popularity: "Recomendado",
-            price: 89.99,
             image: "/elect--bateriaCatx500.png"
         },
         {
@@ -44,7 +30,6 @@ const ShopMain = () => {
             category: "Frenos",
             quality: "Profesional",
             popularity: "Más Vendido",
-            price: 149.99,
             image: "/fren--juegoFrenoCeramicox500.png"
         },
         {
@@ -52,91 +37,111 @@ const ShopMain = () => {
             category: "Transmisión",
             quality: "Genuino",
             popularity: "Más Vendido",
-            price: 249.99,
             image: "/trans--kitEmbriague.png"
         },
-    ]
+        {
+            name: "Kit de Embrague Completo",
+            category: "Transmisión",
+            quality: "Genuino",
+            popularity: "Más Vendido",
+            image: "/trans--kitEmbriague.png"
+        }
+    ];
 
     return (
-        <div className="max-w-[1840px] py-[2rem] px-[1rem]">
-            <div>
-                <h2 className="text-2xl font-bold text-center text-[#254168]">Componentes de Calidad para el Mundo Automotriz</h2>
-                <p className="text-center mt-4 text-[#254168cc]">
+        <div className="">
+            <div className="sm:w-[98%] md:w-[95%] xl:w-[85%] 2xl:w-[70%] py-8 px-4 mt-8 m-auto">
+
+                {/* Título principal */}
+                <h2 className="text-[#254168] text-center font-bold text-[clamp(1.5rem,5vw,2.5rem)]">
+                    Componentes de Calidad para el Mundo Automotriz
+                </h2>
+                <p className="text-center mt-4 text-[#254168cc] text-[clamp(0.9rem,2vw,1.2rem)] max-w-4xl mx-auto">
                     Ofrecemos una amplia selección de partes y accesorios de las mejores marcas para mantener tu vehículo en óptimas condiciones.
                 </p>
-                <div className="mt-8">
+
+                <div className="mt-12">
                     <div className="flex justify-between items-center mb-4 gap-5">
-                        <h3 className="text-xl font-semibold text-[#254168]">Categorías Populares</h3>
-                        <p className="text-sm flex items-center gap-1 text-[#f9cb21]">
+                        <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
+                            Categorías Populares
+                        </h3>
+                        <p className="text-sm md:text-xl  flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
                             Ver Todas <FaArrowRight />
                         </p>
                     </div>
-                    <div className="flex overflow-x-auto scrollbar-hide gap-4">
+
+                    {/* GRID IMPLEMENTADO */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8 lg:mt-10">
                         {featuredCategories.map((category, index) => (
                             <div
                                 key={index}
-                                className="relative flex-none w-60 h-60 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105"
+                                className="relative w-full aspect-square bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105 cursor-pointer  shadow-md"
                                 style={{ backgroundImage: `url(${category.image})` }}
                             >
-                                <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#f9cb21] bg-opacity-50 text-white text-center">
-                                    <h2 className="font-semibold">{category.name}</h2>
+                                <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#f9cb21] text-white text-center">
+                                    <h2 className="font-semibold text-[clamp(1rem,3vw,1.4rem)]">{category.name}</h2>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="mt-8">
+
+
+                {/* Productos destacados */}
+                <div className="mt-12">
                     <div className="flex justify-between items-center mb-4 gap-5">
-                        <h3 className="text-xl font-semibold text-[#254168]">Productos Destacados</h3>
-                        <p className="text-sm flex items-center gap-1 text-[#f9cb21]">
+                        <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
+                            Productos Destacados
+                        </h3>
+                        <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
                             Ver Todas <FaArrowRight />
                         </p>
                     </div>
-                    <div className="flex overflow-x-auto scrollbar-hide gap-4">
+                    <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
                         {featuredParts.map((part, index) => (
-                            <div className="flex-none bg-white/60">
-                                <div className="w-60 h-64 flex justify-center items-center">
-                                    <img key={index} src={`${part.image}`} className="object-contain p-6" alt="" />
+                            <div key={index} className="flex-none bg-white/60  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+                                <div className="w-52 sm:w-72 md:w-80 h-56 sm:h-72 flex justify-center items-center">
+                                    <img src={part.image} className="object-contain p-6 h-full" alt={part.name} />
                                 </div>
-                                <div className="bg-white p-4 text-[#254168] grid gap-2.5">
+                                <div className="bg-white p-4 text-[#254168] grid gap-3">
                                     <div className="flex flex-col items-start gap-2">
-                                        <span className="text-[12px] px-3 border border-[#f9cb21] rounded-xl">
-                                            {`${part.category}`}
+                                        <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] rounded-xl">
+                                            {part.category}
                                         </span>
-                                        <p className="font-bold text-[18px]">
-                                            {`${part.name}`}
+                                        <p className="font-bold text-[clamp(1rem,3vw,1.4rem)]">
+                                            {part.name}
                                         </p>
                                     </div>
                                     <div className="flex gap-3">
-                                        <span className="text-[12px] px-3 border border-[#254168] bg-[#254168] text-white rounded-xl">{`${part.quality}`}</span>
-                                        <span className="text-[12px] px-3 border border-[#f9cb21] text-[#254168] bg-[#f9cb21] rounded-xl">{`${part.popularity}`}</span>
+                                        <span className="text-xs sm:text-sm px-3 border border-[#254168] bg-[#254168] text-white rounded-xl">{part.quality}</span>
+                                        <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] text-[#254168] bg-[#f9cb21] rounded-xl">{part.popularity}</span>
                                     </div>
-                                    <div className="flex justify-between pt-4">
-                                        <p className="font-semibold">
-                                            {`s/ ${part.price}`}
-                                        </p>
-                                        <button className="flex items-center gap-2 bg-[#f9cb21] py-1 px-3 rounded-sm text-[14px]"><MdOutlineShoppingCart className="text-[#254168]"/>Cotizar</button>
+                                    <div className="flex justify-end items-center pt-4 ">
+                                        <button className="flex items-center gap-2 bg-[#f9cb21] py-1 px-3 rounded-sm text-sm cursor-pointer">
+                                            <MdOutlineShoppingCart className="text-[#254168]" /> Cotizar
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="mt-8">
-                    <div className="relative">
-                        <video src="/montacargasContenedores.mp4" autoPlay muted loop playsinline ></video>
-                        <div className="absolute flex flex-col justify-center text-center top-0 text-white bg-black/25 w-full h-full">
-                            <div className="flex flex-col gap-1 items-center">
-                                <h3 className="text-xl">Promociones Exclusivas</h3>
-                                <p className="font-light leading-5">Aprovecha nuestras rebajas en productos seleccionados.</p>
-                                {/* <p className="text-[13px]">¡Oferta por tiempo limitado!</p> */}
-                                <button className="uppercase p-1 mt-2 bg-[#f9cb21] w-24 text-white font-semibold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300">Ver mas</button>
-                            </div>
-                        </div>
+
+
+            </div>
+                {/* Video sección */}
+                <div className="mt-12 relative">
+                    <video src="/montacargasContenedores.mp4" autoPlay muted loop playsInline className="w-full h-[20rem] object-cover sm:h-[30rem]"></video>
+                    <div className="absolute inset-0 flex flex-col justify-center text-center bg-black/30 text-white p-4 gap-4">
+                        <h3 className="text-[clamp(1.2rem,5vw,3.5rem)] font-semibold">Promociones Exclusivas</h3>
+                        <p className="font-light leading-5 sm:leading-10 text-[clamp(0.9rem,2vw,1.5rem)] max-w-3xl mx-auto">
+                            Aprovecha nuestras rebajas en productos seleccionados.
+                        </p>
+                        <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-28 text-white font-semibold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300 mx-auto">Ver más</button>
                     </div>
                 </div>
-            </div>
         </div>
-    )
-}
-export default ShopMain
+    );
+};
+
+export default ShopMain;

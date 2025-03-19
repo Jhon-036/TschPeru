@@ -5,8 +5,14 @@ html {
 }
 
 body {
-    background-color: #eeee;
+    background-color: #f7f7f7ee;
 }
+
+/* html, body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+   */
 
 /* .flex-start-end {
     justify-content: flex-end; 
