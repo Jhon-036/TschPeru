@@ -49,7 +49,7 @@ const Header = () => {
             </ul>
 
             {/* Contact Button */}
-            <button 
+            <button
               className="uppercase p-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300"
               data-aos="fade-left"
               data-aos-delay="300"
