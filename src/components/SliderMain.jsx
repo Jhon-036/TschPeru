@@ -30,7 +30,7 @@ const SliderMain = () => {
         speed={500}
       >
         <SwiperSlide>
-          <div className='bg-[url(/src/assets/tschperu--img--main1.webp)] h-[35rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
+          <div className='bg-[url(/tschperu--img--main1.webp)] h-[35rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-2'>
                 <h2 className='text-white uppercase text-2xl'>Una amplia gama de repuestos a su disposición.</h2>
@@ -41,7 +41,7 @@ const SliderMain = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='bg-[url(/src/assets/tschperu--img--main2.webp)] h-[35rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
+          <div className='bg-[url(/tschperu--img--main2.webp)] h-[35rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
           <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-2'>
                 <h2 className='text-white uppercase text-2xl'>Repuestos y accesorios esenciales para el óptimo desempeño.</h2>
@@ -52,7 +52,7 @@ const SliderMain = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='bg-[url(/src/assets/tschperu--img--main3.webp)] h-[35rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
+          <div className='bg-[url(/tschperu--img--main3.webp)] h-[35rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
           <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-2'>
                 <h2 className='text-white uppercase text-2xl'>Asesoramiento personalizado en mantenimiento, instalación y repuestos.</h2>
