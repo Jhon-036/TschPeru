@@ -6,19 +6,19 @@ const ShopMain = () => {
     const featuredCategories = [
         {
             name: 'Filtros',
-            image: '/src/assets/categories--filter.webp'
+            image: '/categories--filter.webp'
         },
         {
             name: 'Eléctrico',
-            image: '/src/assets/categories--electronic.webp'
+            image: '/categories--electronic.webp'
         },
         {
             name: 'Frenos',
-            image: '/src/assets/categories--brake.webp'
+            image: '/categories--brake.webp'
         },
         {
             name: 'Suspensión',
-            image: '/src/assets/categories--suspension.webp'
+            image: '/categories--suspension.webp'
         }
     ]
 
@@ -29,7 +29,7 @@ const ShopMain = () => {
             quality: "Premium",
             popularity: "Más Vendido",
             price: 140.99,
-            image: "/src/assets/filter--AceitePremiumx500.png"
+            image: "/filter--AceitePremiumx500.png"
         },
         {
             name: "Batería de Alto Rendimiento",
@@ -37,7 +37,7 @@ const ShopMain = () => {
             quality: "Reforzado",
             popularity: "Recomendado",
             price: 89.99,
-            image: "/src/assets/elect--bateriaCatx500.png"
+            image: "/elect--bateriaCatx500.png"
         },
         {
             name: "Juego de Frenos Cerámicos",
@@ -45,7 +45,7 @@ const ShopMain = () => {
             quality: "Profesional",
             popularity: "Más Vendido",
             price: 149.99,
-            image: "/src/assets/fren--juegoFrenoCeramicox500.png"
+            image: "/fren--juegoFrenoCeramicox500.png"
         },
         {
             name: "Kit de Embrague Completo",
@@ -53,7 +53,7 @@ const ShopMain = () => {
             quality: "Genuino",
             popularity: "Más Vendido",
             price: 249.99,
-            image: "/src/assets/trans--kitEmbriague.png"
+            image: "/trans--kitEmbriague.png"
         },
     ]
 
@@ -124,7 +124,7 @@ const ShopMain = () => {
                 </div>
                 <div className="mt-8">
                     <div className="relative">
-                        <video src="/src/assets/montacargasContenedores.mp4" autoPlay muted loop playsinline ></video>
+                        <video src="/montacargasContenedores.mp4" autoPlay muted loop playsinline ></video>
                         <div className="absolute flex flex-col justify-center text-center top-0 text-white bg-black/25 w-full h-full">
                             <div className="flex flex-col gap-1 items-center">
                                 <h3 className="text-xl">Promociones Exclusivas</h3>
