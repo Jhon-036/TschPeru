@@ -17,7 +17,7 @@ const Header = () => {
       <nav className="p-2">
         <div className="flex justify-between items-center p-2 gap-1">
           <div>
-            <img src="/src/assets/tsch--logo.webp" className="h-8 cursor-pointer object-contain" alt="Tesch Peru Logo" />
+            <img src="/tsch--logo.webp" className="h-8 cursor-pointer object-contain" alt="Tesch Peru Logo" />
           </div>
           <div className="flex items-center gap-1.5">
             <button className="object-contain uppercase p-1.5 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300">
