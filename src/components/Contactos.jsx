@@ -31,7 +31,9 @@ const Contactos = () => {
                         </p>
                         <div className="mt-8 flex flex-col gap-6">
                             {/* Teléfono */}
-                            <div className="flex items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                            <div className="flex items-center gap-4" 
+                            data-aos="fade-up" data-aos-delay="200"
+                            >
                                 <div className="bg-[#f9cb21] p-3 rounded-full flex justify-center items-center">
                                     <FiPhone className="text-[#254168] font-bold text-xl sm:text-2xl" />
                                 </div>
@@ -41,7 +43,10 @@ const Contactos = () => {
                                 </div>
                             </div>
                             {/* Email */}
-                            <div className="flex items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                            <div className="flex items-center gap-4" 
+                            data-aos="fade-up" 
+                            data-aos-delay="300"
+                            >
                                 <div className="bg-[#f9cb21] p-3 rounded-full flex justify-center items-center">
                                     <MdOutlineMail className="text-[#254168] font-bold text-xl sm:text-2xl" />
                                 </div>
@@ -51,7 +56,9 @@ const Contactos = () => {
                                 </div>
                             </div>
                             {/* Dirección */}
-                            <div className="flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
+                            <div className="flex items-center gap-4" 
+                            data-aos="fade-up" data-aos-delay="400"
+                            >
                                 <div className="bg-[#f9cb21] p-3 rounded-full flex justify-center items-center">
                                     <FiMapPin className="text-[#254168] font-bold text-xl sm:text-2xl" />
                                 </div>
@@ -66,7 +73,7 @@ const Contactos = () => {
                     {/* Formulario */}
                     <div 
                         className="w-full xl:w-1/2"
-                        data-aos="fade-left"
+                        data-aos="fade-down"
                     >
                         <FormContactos />
                     </div>
