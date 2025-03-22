@@ -20,7 +20,7 @@ const Shoping = () => {
     useEffect(() => {
         const fetchProductos = async () => {
             try {
-                const res = await fetch('/src/services/productos_tienda.json');
+                const res = await fetch('/productos_tienda.json');
                 const data = await res.json();
                 setProductos(data);
             } catch (error) {
