@@ -30,14 +30,14 @@ const ShopMain = () => {
     {
       name: "Batería de Alto Rendimiento",
       category: "Eléctrico",
-      quality: "Reforzado",
+      quality: "Premium",
       popularity: "Recomendado",
       image: "/elect--bateriaCatx500.png",
     },
     {
       name: "Juego de Frenos Cerámicos",
       category: "Frenos",
-      quality: "Profesional",
+      quality: "Reforzado",
       popularity: "Más Vendido",
       image: "/fren--juegoFrenoCeramicox500.png",
     },
@@ -52,7 +52,7 @@ const ShopMain = () => {
 
   return (
     <div className="">
-      <div className="sm:w-[98%] md:w-[95%] xl:w-[85%] 2xl:w-[75%] py-8 px-4 mt-8 m-auto">
+      <div className="w-[85%] max-w-7xl mx-auto py-8 mt-8 m-auto">
 
         {/* Título principal */}
         <div data-aos="fade-up">
@@ -102,15 +102,15 @@ const ShopMain = () => {
               Ver Todas <FaArrowRight />
             </p>
           </div>
-          <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
+          <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px] ">
             {featuredParts.map((part, index) => (
               <div
                 key={index}
-                className="flex-none bg-white/60 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+                className="flex-none bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
                 data-aos="zoom-in"
                 data-aos-delay={`${index * 150}`}
               >
-                <div className="w-52 sm:w-72 md:w-80 h-56 sm:h-72 flex justify-center items-center">
+                <div className="w-52 sm:w-72 h-56 sm:h-72 flex justify-center items-center">
                   <img src={part.image} className="object-contain p-6 h-full" alt={part.name} />
                 </div>
                 <div className="bg-white p-4 text-[#254168] grid gap-3">

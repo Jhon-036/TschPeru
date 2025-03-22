@@ -1,21 +1,20 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
-import Contactos from './components/Contactos'
-import Footer from './components/Footer'
 import Header from './components/Header'
-import Servicios from './components/Servicios'
-import ShopMain from './components/ShopMain'
-import SliderMain from './components/SliderMain'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <SliderMain />
-      <ShopMain />
-      <Servicios />
-      <Contactos />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/productos' element={<Shop />}/>
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   )
 }
 

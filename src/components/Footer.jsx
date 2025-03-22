@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { BiGlobe } from "react-icons/bi";
-import { CiInstagram, CiYoutube } from "react-icons/ci";
+import { BiGlobe, BiLogoFacebook, BiLogoInstagramAlt } from "react-icons/bi";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { IoLogoTiktok } from "react-icons/io5";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="py-8 xl:py-16 bg-[#254168] text-white">
-      <div className="sm:w-[98%] md:w-[95%] xl:w-[85%] 2xl:w-[70%] m-auto px-4 md:px-6">
+      <div className="w-[85%] max-w-7xl mx-auto m-auto">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
 
           {/* TSCH Perú Info */}
@@ -28,10 +28,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                <CiInstagram className="h-5 w-5" />
+                <BiLogoInstagramAlt className="h-5 w-5" />
               </a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                <CiYoutube className="h-5 w-5" />
+                <BiLogoFacebook className="h-5 w-5" />
               </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                 <IoLogoTiktok className="h-5 w-5" />
@@ -43,11 +43,10 @@ const Footer = () => {
           <div className="space-y-4" data-aos="fade-up" data-aos-delay="100">
             <h3 className="font-bold text-[clamp(1rem,2.5vw,1.25rem)]">Enlaces Rápidos</h3>
             <ul className="space-y-2 text-[clamp(0.9rem,2vw,1rem)]">
-              <li><a href="/" className="text-gray-300 hover:text-white">Inicio</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-white">Sobre Nosotros</a></li>
-              <li><a href="/services" className="text-gray-300 hover:text-white">Servicios</a></li>
-              <li><a href="/products" className="text-gray-300 hover:text-white">Productos</a></li>
-              <li><a href="/blog" className="text-gray-300 hover:text-white">Blog</a></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white">Inicio</Link></li>
+              <li><Link to="/nosotros" className="text-gray-300 hover:text-white">Nosotros</Link></li>
+              <li><Link to="/productos" className="text-gray-300 hover:text-white">productos</Link></li>
+              <li><Link to="/servicios" className="text-gray-300 hover:text-white">Servicios</Link></li>
             </ul>
           </div>
 
@@ -61,11 +60,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <FiPhone className="h-5 w-5 text-gray-300" />
-                <a href="#" className="text-gray-300 hover:text-white">+51 951 758 040</a>
+                <span className="text-gray-300">+51 951 758 040</span>
               </li>
               <li className="flex items-center space-x-3">
                 <FiMail className="h-5 w-5 text-gray-300" />
-                <a href="mailto:tschperu@tschperu.com" className="text-gray-300 hover:text-white">tschperu@tschperu.com</a>
+                <span className="text-gray-300">tschperu@tschperu.com</span>
               </li>
             </ul>
           </div>
@@ -74,9 +73,9 @@ const Footer = () => {
           <div className="space-y-4" data-aos="fade-up" data-aos-delay="300">
             <h3 className="font-bold text-[clamp(1rem,2.5vw,1.25rem)]">Legal</h3>
             <ul className="space-y-2 text-[clamp(0.9rem,2vw,1rem)]">
-              <li><a href="/terms" className="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
-              <li><a href="/privacy" className="text-gray-300 hover:text-white">Política de Privacidad</a></li>
-              <li><a href="/faq" className="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+              <li><Link to="/terminos-y-condiciones" className="text-gray-300 hover:text-white">Términos y Condiciones</Link></li>
+              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Política de Privacidad</Link></li>
+              <li><Link to="/faq" className="text-gray-300 hover:text-white">Preguntas Frecuentes</Link></li>
             </ul>
           </div>
 

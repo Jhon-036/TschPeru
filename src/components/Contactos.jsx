@@ -16,7 +16,7 @@ const Contactos = () => {
 
     return (
         <div className="bg-white">
-            <div className="sm:w-[98%] md:w-[95%] xl:w-[85%] 2xl:w-[70%] py-8 px-4 mt-8 m-auto">
+            <div className="w-[85%] max-w-7xl mx-auto py-8  mt-8 m-auto">
                 <div className="flex flex-col xl:flex-row justify-between gap-8 items-center xl:items-start">
                     {/* Info Contacto */}
                     <div 

@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa"
 import { IoCloseSharp } from "react-icons/io5"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const [isShowNav, setIsShowNav] = useState(false)
@@ -22,9 +23,9 @@ const Header = () => {
   }
 
   return (
-    <header className="w-full shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
-      <nav className="p-2 w-full">
-        <div className="flex w-full justify-between items-center p-2 gap-4 sm:w-[98%] md:w-[95%] xl:w-[85%] 2xl:w-[70%] mx-auto">
+    <header className="w-full flex items-center shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
+      <nav className="w-[85%] max-w-7xl mx-auto">
+        <div className="flex w-full justify-between items-center py-2  gap-4">
 
           {/* Logo */}
           <div data-aos="fade-down">
@@ -35,10 +36,18 @@ const Header = () => {
           <div className="flex items-center gap-4">
             {/* Desktop Nav */}
             <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Inicio</li>
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Nosotros</li>
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Productos</li>
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Servicios</li>
+              <Link to="/" >
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Inicio</li>
+              </Link>
+              <Link to="/nosotros">
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Nosotros</li>
+              </Link>
+              <Link to="/productos">
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Productos</li>
+              </Link>
+              <Link to="/servicios">
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Servicios</li>
+              </Link>
             </ul>
 
             {/* Contact Button */}
@@ -70,10 +79,18 @@ const Header = () => {
               />
             </div>
             <ul className="flex flex-col gap-4 p-4">
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Inicio</li>
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Nosotros</li>
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Productos</li>
-              <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Servicios</li>
+              <Link to={"/"}>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Inicio</li>
+              </Link>
+              <Link to={"/nosotros"}>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Nosotros</li>
+              </Link>
+              <Link to={"/productos"}>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Productos</li>
+              </Link>
+              <Link to={"/servicios"}>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Servicios</li>
+              </Link>
             </ul>
           </div>
         </div>

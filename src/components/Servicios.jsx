@@ -12,7 +12,7 @@ const Servicios = () => {
   }, []);
 
   return (
-    <div className="sm:w-[98%] md:w-[95%] xl:w-[85%] 2xl:w-[75%] py-8 px-4 mt-8 m-auto">
+    <div className="w-[85%] max-w-7xl mx-auto py-8  mt-8 m-auto">
       <h2 
         className="text-2xl text-[#254168] font-bold text-center sm:text-3xl" 
         data-aos="fade-up"
