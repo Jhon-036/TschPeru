@@ -1,163 +1,192 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import { useState, useEffect } from "react";
+import { FaCheck, FaArrowLeft, FaEnvelope, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
 
-const Shoping = () => {
-    // Estado para almacenar la categoría seleccionada
-    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
-    // 
-    const [productos, setProductos] = useState([])
+export default function Shoping() {
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
+  const [productos, setProductos] = useState([]);
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-    }, []);
+  const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-    useEffect(() => {
-        const fetchProductos = async () => {
-            try {
-                const res = await fetch('/services/productos_tienda.json');
-                const data = await res.json();
-                setProductos(data);
-            } catch (error) {
-                console.log("error al cargar la DB : ", error);
-            }
-        }
-        fetchProductos();
-    }, [])
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const res = await fetch("/services/productos_tienda.json");
+        const data = await res.json();
+        setProductos(data);
+      } catch (error) {
+        console.log("Error al cargar la DB: ", error);
+      }
+    };
+    fetchProductos();
+  }, []);
 
+  const productosFiltrados = categoriaSeleccionada
+    ? productos.filter((producto) => producto.category === categoriaSeleccionada)
+    : productos;
 
-    // Filtrar productos según la categoría seleccionada
-    const productosFiltrados = categoriaSeleccionada
-        ? productos.filter((producto) => producto.category === categoriaSeleccionada)
-        : productos;
+  const categorias = productos.length > 0 ? [...new Set(productos.map((producto) => producto.category))] : [];
 
-    return (
-        <div className="w-[85%] max-w-7xl mx-auto">
-            <div className="flex gap-6 my-28">
-                <div className="flex flex-col gap-4">
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${!categoriaSeleccionada ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada(null)}
-                    >
-                        Todos
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Portacontenedores" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Portacontenedores")}
-                    >
-                        Portacontenedores
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Montacargas" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Montacargas")}
-                    >
-                        Montacargas
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Motores" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Motores")}
-                    >
-                        Motores
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Transmisiones" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Transmisiones")}
-                    >
-                        Transmisiones
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Solenoides" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Solenoides")}
-                    >
-                        Solenoides
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Fisibles y relé" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Fisibles y relé")}
-                    >
-                        Fisibles y relé
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Conectores automotrices" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Conectores automotrices")}
-                    >
-                        Conectores automotrices
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Conectores industriales" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Conectores industriales")}
-                    >
-                        Conectores industriales
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Bosch" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Bosch")}
-                    >
-                        Bosch
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Delco remy" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Delco remy")}
-                    >
-                        Delco remy
-                    </button>
-                    <button
-                        className={`px-16 py-3 rounded-lg text-xl cursor-pointer ${categoriaSeleccionada === "Sensores industriales" ? "bg-[#f9cb21]" : "bg-gray-200 hover:bg-gray-300 duration-200"}`}
-                        onClick={() => setCategoriaSeleccionada("Sensores industriales")}
-                    >
-                        Sensores industriales
-                    </button>
-                </div>
+  const handleQuoteClick = (productName) => {
+    setSelectedProduct(productName);
+    setQuoteDialogOpen(true);
+    setShowEmailForm(false);
+  };
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {productosFiltrados.map((producto, index) => (
-                        <div
-                        key={index}
-                        className="w-72 flex flex-col justify-between bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-                        data-aos="zoom-in"
-                        data-aos-delay={`${index * 150}`}
-                      >
-                        <div className="flex justify-center items-center h-[241px]">
-                          <img src={producto.image} className="object-contain max-h-full" alt={producto.name} />
-                        </div>
-                        
-                        <div className="bg-white p-4 text-[#254168] flex flex-col justify-between flex-grow">
-                          <div className="flex flex-col items-start gap-2">
-                            <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] rounded-xl">
-                              {producto.category}
-                            </span>
-                            <p className="font-bold text-[clamp(1rem,3vw,1.2rem)] line-clamp-3">
-                              {producto.descripcion}
-                            </p>
-                          </div>
-                      
-                          <div className="flex gap-3 mt-4">
-                            <span className="text-xs sm:text-sm px-3 border border-[#254168] bg-[#254168] text-white rounded-xl">{producto.quality}</span>
-                            <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] text-[#254168] bg-[#f9cb21] rounded-xl">{producto.popularity}</span>
-                          </div>
-                      
-                          <div className="flex justify-end items-center pt-4 mt-auto">
-                            <button className="flex items-center gap-2 bg-[#f9cb21] py-1 px-3 rounded-sm text-sm cursor-pointer">
-                              <MdOutlineShoppingCart className="text-[#254168]" /> Cotizar
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      
-                    ))}
-                </div>
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    alert("Formulario enviado con éxito");
+    setQuoteDialogOpen(false);
+    setShowEmailForm(false);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-
+  return (
+    <div className="mt-16">
+          <div className="relative bg-[url(/about-company.jpg)] h-[30rem] bg-center bg-no-repeat bg-cover">
+            <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
+                <h2 className="text-white text-[clamp(1.2rem,5vw,3rem)]">NUESTROS PRODUCTOS</h2>
             </div>
+          </div>
+        <div className="container mx-auto px-4 py-8">
+        
+          <div className="flex flex-col md:flex-row gap-6 my-11">
+            {/* Categorías - Desktop */}
+            <div className="hidden md:block w-64 shrink-0">
+              <div className="sticky top-4">
+                <h2 className="text-xl font-semibold mb-4 text-[#254168]">Categorías</h2>
+                <div className="space-y-2">
+                  <button
+                    className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${!categoriaSeleccionada ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
+                    onClick={() => setCategoriaSeleccionada(null)}
+                  >
+                    Todos
+                    {!categoriaSeleccionada && <FaCheck className="ml-2 inline" />}
+                  </button>
+                  {categorias.map((categoria) => (
+                    <button
+                      key={categoria}
+                      className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${categoriaSeleccionada === categoria ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
+                      onClick={() => setCategoriaSeleccionada(categoria)}
+                    >
+                      {categoria}
+                      {categoriaSeleccionada === categoria && <FaCheck className="ml-2 inline" />}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+        
+            {/* Productos */}
+            <div className="flex-1">
+              {productos.length === 0 ? (
+                <div className="flex justify-center items-center h-64">
+                  <div className="animate-pulse text-[#254168]">Cargando productos...</div>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {productosFiltrados.map((producto) => (
+                    <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                      <div className="w-full aspect-square relative mb-4">
+                        <img src={producto.image || "/placeholder.svg"} alt={producto.name} className="object-cover w-full h-full" />
+                      </div>
+                      <h3 className="font-semibold text-lg text-[#254168]">{producto.name}</h3>
+                      <p className="text-sm text-[#254168]/70 mb-2">{producto.category}</p>
+                      <button
+                        className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
+                        onClick={() => handleQuoteClick(producto.name)}
+                      >
+                        Cotizar
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        
+          {/* Modal con animación */}
+          {quoteDialogOpen && (
+            <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+              <div className="bg-white rounded-lg p-6 max-w-md w-full relative animate-accordion-down">
+                {!showEmailForm ? (
+                  <>
+                    <h2 className="text-xl font-bold text-[#254168] mb-4">Solicitar Cotización</h2>
+                    <p className="mb-6">{selectedProduct && `Desea cotizar "${selectedProduct}" por:`}</p>
+                    <div className="flex gap-4">
+                      <button
+                        className="flex-1 bg-[#254168] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
+                        onClick={() => setShowEmailForm(true)}
+                      >
+                        <FaEnvelope className="mr-2" /> Correo
+                      </button>
+                      <button
+                        className="flex-1 bg-[#25D366] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
+                        onClick={() => setQuoteDialogOpen(false)}
+                      >
+                        <FaWhatsapp className="mr-2" /> WhatsApp
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <button className="absolute top-4 left-4" onClick={() => setShowEmailForm(false)}>
+                      <FaArrowLeft />
+                    </button>
+                    <h2 className="text-xl font-bold text-[#254168] mb-4">Formulario de Cotización</h2>
+                    <form onSubmit={handleFormSubmit} className="space-y-4 animate-accordion-down">
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Nombre"
+                        className="w-full p-2 border rounded"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="Correo Electrónico"
+                        className="w-full p-2 border rounded"
+                        required
+                      />
+                      <input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="Teléfono"
+                        className="w-full p-2 border rounded"
+                      />
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder={`Mensaje sobre ${selectedProduct}`}
+                        className="w-full p-2 border rounded"
+                        rows="4"
+                        required
+                      ></textarea>
+                      <button type="submit" className="bg-[#f9cb21] text-[#254168] font-bold p-2 w-full flex items-center justify-center rounded transition-transform hover:scale-105">
+                        <FaPaperPlane className="mr-2" /> Enviar
+                      </button>
+                    </form>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
         </div>
-    );
-};
-
-export default Shoping;
+    </div>
+  );
+}

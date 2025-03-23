@@ -28,31 +28,33 @@ const Header = () => {
         <div className="flex w-full justify-between items-center py-2  gap-4">
 
           {/* Logo */}
-          <div data-aos="fade-down">
-            <img src="/tsch--logo.webp" className="h-8 sm:h-12 cursor-pointer object-contain" alt="Tesch Peru Logo" />
-          </div>
+          <Link to={'/'}>
+            <div data-aos="fade-down">
+              <img src="/tsch--logo.webp" className="h-8 sm:h-24 cursor-pointer object-contain" alt="Tesch Peru Logo" />
+            </div>
+          </Link>
 
           {/* Desktop + Mobile Menu */}
           <div className="flex items-center gap-4">
             {/* Desktop Nav */}
             <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
               <Link to="/" >
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Inicio</li>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Inicio</li>
               </Link>
               <Link to="/nosotros">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Nosotros</li>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Nosotros</li>
               </Link>
               <Link to="/productos">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Productos</li>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Productos</li>
               </Link>
               <Link to="/servicios">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-sm sm:text-base transition-colors duration-300">Servicios</li>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Servicios</li>
               </Link>
             </ul>
 
             {/* Contact Button */}
             <button className="uppercase p-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
-              <a href="#">Contactos</a>
+              <span href="#">Contactos</span>
             </button>
 
             {/* Mobile Menu Icon */}

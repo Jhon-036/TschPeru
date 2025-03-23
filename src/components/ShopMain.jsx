@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const ShopMain = () => {
   useEffect(() => {
@@ -13,10 +14,10 @@ const ShopMain = () => {
   }, []);
 
   const featuredCategories = [
-    { name: "Filtros", image: "/categories--filter.webp" },
-    { name: "Eléctrico", image: "/categories--electronic.webp" },
-    { name: "Frenos", image: "/categories--brake.webp" },
-    { name: "Suspensión", image: "/categories--suspension.webp" },
+    { name: "Montacargas", image: "/categories--filter.webp" },
+    { name: "Portacontenedores", image: "/categories--electronic.webp" },
+    { name: "Transmisiones", image: "/categories--brake.webp" },
+    { name: "Solenoides", image: "/categories--suspension.webp" },
   ];
 
   const featuredParts = [
@@ -66,13 +67,15 @@ const ShopMain = () => {
 
         {/* Categorías Populares */}
         <div className="mt-12" data-aos="fade-up">
-          <div className="flex justify-between items-center mb-4 gap-5">
+          <div className="fjustify-between items-center mb-4 gap-5">
             <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
               Categorías Populares
             </h3>
-            <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
-              Ver Todas <FaArrowRight />
-            </p>
+            <Link to={'/productos'}>
+              <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
+                Ver Todas <FaArrowRight />
+              </p>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8 lg:mt-10">
@@ -92,15 +95,18 @@ const ShopMain = () => {
           </div>
         </div>
 
+
         {/* Productos Destacados */}
         <div className="mt-12" data-aos="fade-up">
           <div className="flex justify-between items-center mb-4 gap-5">
             <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
               Productos Destacados
             </h3>
-            <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
-              Ver Todas <FaArrowRight />
-            </p>
+            <Link to={'/productos'}>
+              <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
+                Ver Todas <FaArrowRight />
+              </p>
+            </Link>
           </div>
           <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px] ">
             {featuredParts.map((part, index) => (

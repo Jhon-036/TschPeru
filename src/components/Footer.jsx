@@ -27,15 +27,15 @@ const Footer = () => {
               Somos una empresa dedicada al soporte técnico y comercial de equipo portuario, minería y construcción.
             </p>
             <div className="flex space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                <BiLogoInstagramAlt className="h-5 w-5" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                <BiLogoFacebook className="h-5 w-5" />
-              </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-                <IoLogoTiktok className="h-5 w-5" />
-              </a>
+              <li href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white list-none">
+                <BiLogoInstagramAlt className="h-12 w-12" />
+              </li>
+              <li href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white list-none">
+                <BiLogoFacebook className="h-12 w-12" />
+              </li>
+              <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white list-none">
+                <IoLogoTiktok className="h-12 w-12" />
+              </li>
             </div>
           </div>
 
