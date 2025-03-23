@@ -4,8 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
-import ScrollToTop from './components/ScrollToTop.JSX'
 import About from './pages/About'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 function App() {
   return (
