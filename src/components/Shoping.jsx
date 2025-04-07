@@ -50,71 +50,72 @@ export default function Shoping() {
 
   return (
     <div className="mt-16">
-          <div className="relative bg-[url(/about-company.jpg)] h-[30rem] bg-center bg-no-repeat bg-cover">
-            <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
-                <h2 className="text-white text-[clamp(1.2rem,5vw,3rem)]">NUESTROS PRODUCTOS</h2>
-            </div>
-          </div>
-        <div className="container mx-auto px-4 py-8">
-        
-          <div className="flex flex-col md:flex-row gap-6 my-11">
-            {/* Categorías - Desktop */}
-            <div className="hidden md:block w-64 shrink-0">
-              <div className="sticky top-4">
-                <h2 className="text-xl font-semibold mb-4 text-[#254168]">Categorías</h2>
-                <div className="space-y-2">
+      <div className="relative bg-[url(/about-company.jpg)] h-[30rem] bg-center bg-no-repeat bg-cover">
+        <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
+          <h2 className="text-white text-[clamp(1.2rem,5vw,3rem)]">NUESTROS PRODUCTOS</h2>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 py-8">
+
+        <div className="flex flex-col md:flex-row gap-6 my-11">
+          {/* Categorías - Desktop */}
+          <div className="hidden md:block w-64 shrink-0">
+            <div className="sticky top-4">
+              <h2 className="text-xl font-semibold mb-4 text-[#254168]">Categorías</h2>
+              <div className="space-y-2">
+                <button
+                  className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${!categoriaSeleccionada ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
+                  onClick={() => setCategoriaSeleccionada(null)}
+                >
+                  Todos
+                  {!categoriaSeleccionada && <FaCheck className="ml-2 inline" />}
+                </button>
+                {categorias.map((categoria) => (
                   <button
-                    className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${!categoriaSeleccionada ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
-                    onClick={() => setCategoriaSeleccionada(null)}
+                    key={categoria}
+                    className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${categoriaSeleccionada === categoria ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
+                    onClick={() => setCategoriaSeleccionada(categoria)}
                   >
-                    Todos
-                    {!categoriaSeleccionada && <FaCheck className="ml-2 inline" />}
+                    {categoria}
+                    {categoriaSeleccionada === categoria && <FaCheck className="ml-2 inline" />}
                   </button>
-                  {categorias.map((categoria) => (
-                    <button
-                      key={categoria}
-                      className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${categoriaSeleccionada === categoria ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
-                      onClick={() => setCategoriaSeleccionada(categoria)}
-                    >
-                      {categoria}
-                      {categoriaSeleccionada === categoria && <FaCheck className="ml-2 inline" />}
-                    </button>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
-        
-            {/* Productos */}
-            <div className="flex-1">
-              {productos.length === 0 ? (
-                <div className="flex justify-center items-center h-64">
-                  <div className="animate-pulse text-[#254168]">Cargando productos...</div>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {productosFiltrados.map((producto) => (
-                    <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
-                      <div className="w-full aspect-square relative mb-4">
-                        <img src={producto.image || "/placeholder.svg"} alt={producto.name} className="object-cover w-full h-full" />
-                      </div>
-                      <h3 className="font-semibold text-lg text-[#254168]">{producto.name}</h3>
-                      <p className="text-sm text-[#254168]/70 mb-2">{producto.category}</p>
-                      <button
-                        className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
-                        onClick={() => handleQuoteClick(producto.name)}
-                      >
-                        Cotizar
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
-        
-          {/* Modal con animación */}
-          {quoteDialogOpen && (
-            <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+
+          {/* Productos */}
+          <div className="flex-1">
+            {productos.length === 0 ? (
+              <div className="flex justify-center items-center h-64">
+                <div className="animate-pulse text-[#254168]">Cargando productos...</div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {productosFiltrados.map((producto) => (
+                  <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                    <div className="w-full aspect-square relative mb-4">
+                      <img src={producto.image || "/placeholder.svg"} alt={producto.name} className="object-cover w-full h-full" />
+                    </div>
+                    <h3 className="font-semibold text-lg text-[#254168]">{producto.name}</h3>
+                    <p className="text-sm text-[#254168]/70 mb-2">{producto.category}</p>
+                    <button
+                      className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
+                      onClick={() => handleQuoteClick(producto.name)}
+                    >
+                      Cotizar
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Modal con animación */}
+        {quoteDialogOpen && (
+          <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+            <div className="w-[85%] m-auto">
               <div className="bg-white rounded-lg p-6 max-w-md w-full relative animate-accordion-down">
                 {!showEmailForm ? (
                   <>
@@ -136,8 +137,8 @@ export default function Shoping() {
                     </div>
                   </>
                 ) : (
-                  <>
-                    <button className="absolute top-4 left-4" onClick={() => setShowEmailForm(false)}>
+                  <div className="">
+                    <button className="text-[#254168] pb-8" onClick={() => setShowEmailForm(false)}>
                       <FaArrowLeft />
                     </button>
                     <h2 className="text-xl font-bold text-[#254168] mb-4">Formulario de Cotización</h2>
@@ -160,14 +161,24 @@ export default function Shoping() {
                         className="w-full p-2 border rounded"
                         required
                       />
-                      <input
-                        type="text"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="Teléfono"
-                        className="w-full p-2 border rounded"
-                      />
+                      <div className="flex gap-2">
+                        <input
+                          type="number"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="Teléfono"
+                          className="w-full p-2 border rounded"
+                        />
+                        <input
+                          type="number"
+                          name="ruc"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="Numero Ruc"
+                          className="w-full p-2 border rounded"
+                        />
+                      </div>
                       <textarea
                         name="message"
                         value={formData.message}
@@ -181,12 +192,13 @@ export default function Shoping() {
                         <FaPaperPlane className="mr-2" /> Enviar
                       </button>
                     </form>
-                  </>
+                  </div>
                 )}
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

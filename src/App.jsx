@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import About from './pages/About'
-import ScrollToTop from './components/ScrollToTop.jsx'
+import ScrollToTop from './components/ScrollToTopp.jsx'
 
 function App() {
   return (

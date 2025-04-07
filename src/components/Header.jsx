@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react"
-import { FaBars } from "react-icons/fa"
-import { IoCloseSharp } from "react-icons/io5"
+import { FaBars, FaYoutube } from "react-icons/fa"
+import { IoCloseSharp, IoLogoTiktok } from "react-icons/io5"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Link } from "react-router-dom"
+import { FiPhone } from "react-icons/fi"
+import { BiLogoFacebook, BiLogoInstagramAlt } from "react-icons/bi"
+import { IoIosArrowDown } from "react-icons/io"
 
 const Header = () => {
   const [isShowNav, setIsShowNav] = useState(false)
@@ -23,80 +26,106 @@ const Header = () => {
   }
 
   return (
-    <header className="w-full flex items-center shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
-      <nav className="w-[85%] max-w-7xl mx-auto">
-        <div className="flex w-full justify-between items-center py-2  gap-4">
-
-          {/* Logo */}
-          <Link to={'/'}>
-            <div data-aos="fade-down">
-              <img src="/tsch--logo.webp" className="h-8 sm:h-24 cursor-pointer object-contain" alt="Tesch Peru Logo" />
-            </div>
-          </Link>
-
-          {/* Desktop + Mobile Menu */}
-          <div className="flex items-center gap-4">
-            {/* Desktop Nav */}
-            <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
-              <Link to="/" >
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Inicio</li>
-              </Link>
-              <Link to="/nosotros">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Nosotros</li>
-              </Link>
-              <Link to="/productos">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Productos</li>
-              </Link>
-              <Link to="/servicios">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Servicios</li>
-              </Link>
-            </ul>
-
-            {/* Contact Button */}
-            <button className="uppercase p-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
-              <span href="#">Contactos</span>
-            </button>
-
-            {/* Mobile Menu Icon */}
-            <div className="md:hidden hover:bg-gray-100 p-2 rounded-xl cursor-pointer" onClick={handleIsShowNav} data-aos="fade-down" data-aos-delay="400">
-              <FaBars className="text-xl text-[#254168]" />
-            </div>
+    <header className="w-full  shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
+      <div className="bg-[#f9cb21] p-[4px] flex justify-evenly items-center">
+        <div className="">
+          <li className="flex items-center space-x-3">
+            <FiPhone className="h-5 w-5 text-[#254168]" />
+            <span className="text-[#254168] text-sm">+51 951 758 040</span>
+          </li>
+        </div>
+        <div>
+          <div className="flex gap-2">
+            <li href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+              <BiLogoInstagramAlt className="text-sm md:text-[18px] cursor-pointer" />
+            </li>
+            <li href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+              <BiLogoFacebook className="text-sm md:text-[18px] cursor-pointer" />
+            </li>
+            <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+              <FaYoutube className="text-sm md:text-[18px] cursor-pointer" />
+            </li>
+            <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+              <IoLogoTiktok className="text-sm md:text-[18px] cursor-pointer" />
+            </li>
           </div>
         </div>
+      </div>
+      <div className="flex items-center">
+        <nav className="w-[85%] max-w-7xl mx-auto">
+          <div className="flex w-full justify-between items-center py-4  gap-4">
 
-        {/* Mobile Nav Overlay */}
-        <div
-          className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
-          onClick={handleNotShowNav}
-        >
+            {/* Logo */}
+            <Link to={'/'}>
+              <div data-aos="fade-down">
+                <img src="/tsch--logo.jpeg" className="h-8 sm:h-[60px] cursor-pointer object-contain" alt="Tesch Peru Logo" />
+              </div>
+            </Link>
+
+            {/* Desktop + Mobile Menu */}
+            <div className="flex items-center gap-4">
+              {/* Desktop Nav */}
+              <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
+                <Link to="/" >
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Inicio</li>
+                </Link>
+                <Link to="/nosotros">
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Nosotros</li>
+                </Link>
+                <Link to="/productos">
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Productos</li>
+                </Link>
+                <Link to="/servicios">
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center">Servicios<IoIosArrowDown /></li>
+                </Link>
+              </ul>
+
+              {/* Contact Button */}
+              <button className="uppercase p-2 lg:px-5 lg:py-3 bg-[#f9cb21] text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
+                <span href="#">Contactos</span>
+              </button>
+
+              {/* Mobile Menu Icon */}
+              <div className="md:hidden hover:bg-gray-100 p-2 rounded-xl cursor-pointer" onClick={handleIsShowNav} data-aos="fade-down" data-aos-delay="400">
+                <FaBars className="text-xl text-[#254168]" />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Nav Overlay */}
           <div
-            className={`absolute top-0 left-0 w-[80%] max-w-xs bg-white h-screen shadow-lg transition-transform duration-300 ${isShowNav ? "translate-x-0" : "-translate-x-full"}`}
-            onClick={(e) => e.stopPropagation()}
+            className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
+            onClick={handleNotShowNav}
           >
+            <div
+              className={`absolute top-0 left-0 w-[80%] max-w-xs bg-white h-screen shadow-lg transition-transform duration-300 ${isShowNav ? "translate-x-0" : "-translate-x-full"}`}
+              onClick={(e) => e.stopPropagation()}
+            >
 
-            <div className="flex justify-end p-5">
-              <IoCloseSharp
-                className="text-2xl text-[#254168] cursor-pointer hover:text-gray-900 transition-colors duration-300"
-                onClick={handleNotShowNav}
-              />
+              <div className="flex justify-end p-5">
+                <IoCloseSharp
+                  className="text-2xl text-[#254168] cursor-pointer hover:text-gray-900 transition-colors duration-300"
+                  onClick={handleNotShowNav}
+                />
+              </div>
+              <ul className="flex flex-col gap-4 p-4">
+                <Link to={"/"}>
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Inicio</li>
+                </Link>
+                <Link to={"/nosotros"}>
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Nosotros</li>
+                </Link>
+                <Link to={"/productos"}>
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Productos</li>
+                </Link>
+                <Link to={"/servicios"}>
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Servicios</li>
+                </Link>
+              </ul>
             </div>
-            <ul className="flex flex-col gap-4 p-4">
-              <Link to={"/"}>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Inicio</li>
-              </Link>
-              <Link to={"/nosotros"}>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Nosotros</li>
-              </Link>
-              <Link to={"/productos"}>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Productos</li>
-              </Link>
-              <Link to={"/servicios"}>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Servicios</li>
-              </Link>
-            </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   )
 }

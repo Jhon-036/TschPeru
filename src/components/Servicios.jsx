@@ -20,12 +20,11 @@ const Servicios = () => {
         Nuestros Servicios
       </h2>
 
-      <div className="mt-8 xl:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8">
+      <div className="mt-8 xl:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 xl:gap-8">
         {[
-          { image: '/service--consulting.jpg', title: 'Asesoramiento Personal' },
-          { image: '/service--mantenim.jpg', title: 'Mantenimiento Correctivo' },
-          { image: '/service--installation.jpg', title: 'Instalaciones' },
-          { image: '/service--warranty.jpg', title: 'Garantía de Servicio' }
+          { image: '/service--installation.jpg', title: 'Repuestos de calidad, rendimiento garantizado' },
+          { image: '/service--mantenim.jpg', title: 'Soporte experto, soluciones a tu medida' },
+          { image: '/service--consulting.jpg', title: 'Inovación y tegnología para potenciar tu maquinaria' },
         ].map((service, index) => (
           <div
             key={index}

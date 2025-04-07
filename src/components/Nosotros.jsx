@@ -1,154 +1,129 @@
-import { Clock, MapPin, Ship, Truck, Users } from "lucide-react"
+import { FaAward, FaBalanceScale, FaBullseye, FaHandshake, FaLeaf, FaLightbulb, FaRegLightbulb, FaUsers } from "react-icons/fa"
+import AccordionItem from "./AccordionItem"
 
 const Nosotros = () => {
+
     return (
-        <div className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
-            {/* Hero Section */}
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-                <div className="space-y-4">
-                    <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">TSCH PERU</h1>
-                    <p className="text-2xl font-medium text-secondary mt-2">Expertos en Repuestos Portuarios</p>
-                    <p className="text-muted-foreground md:text-xl">
-                        Somos una empresa líder en la distribución de repuestos de alta calidad para equipos portuarios,
-                        comprometidos con la eficiencia y continuidad operativa de nuestros clientes.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                        <button size="lg" className="bg-secondary text-primary hover:bg-secondary/90">
-                            Nuestros Productos
-                        </button>
-                        <button variant="outline" size="lg">
-                            Contáctanos
-                        </button>
-                    </div>
-                </div>
-                <div className="relative aspect-video overflow-hidden rounded-lg">
-                    <img
-                        src="/placeholder.svg?height=720&width=1280"
-                        alt="Puerto con grúas y contenedores"
-                        className="object-cover"
-                        fill
-                        priority
-                    />
+        <div className="mt-16">
+
+            <div className="relative bg-[url(/somos--tsch.avif)] h-[30rem] bg-center bg-no-repeat bg-cover">
+                <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
+                    <h2 className="text-white font-bold text-[clamp(1.8rem,5vw,3rem)]">SOMOS T.S.C.H</h2>
                 </div>
             </div>
 
-            {/* Mission and Vision */}
-            <div className="mt-20 grid gap-12 lg:grid-cols-2">
-                <div>
-                    <div className="bg-primary/10">
-                        <div className="flex items-center gap-2 text-primary">
-                            <div className="h-5 w-5 text-secondary" />
-                            Nuestra Misión
-                        </div>
-                    </div>
-                    <div>
-                        <p>
-                            Proporcionar soluciones integrales en repuestos para equipos portuarios, garantizando la máxima
-                            disponibilidad operativa de las instalaciones de nuestros clientes mediante productos de calidad, entrega
-                            oportuna y asesoría técnica especializada.
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div className="bg-primary/10">
-                        <div className="flex items-center gap-2 text-primary">
-                            <Ship className="h-5 w-5 text-secondary" />
-                            Nuestra Visión
-                        </div>
-                    </div>
-                    <div>
-                        <p>
-                            Ser reconocidos como el socio estratégico preferido en el suministro de repuestos para equipos portuarios
-                            en toda la región, destacándonos por nuestra excelencia en servicio, innovación y compromiso con el éxito
-                            de nuestros clientes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Why Choose Us */}
-            <div className="mt-20">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">¿Por qué elegirnos?</h2>
-                    <p className="mt-4 text-muted-foreground md:text-lg max-w-3xl mx-auto">
-                        Nos distinguimos por ofrecer un servicio integral que combina calidad, experiencia y compromiso
-                    </p>
-                </div>
-
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <div>
-                        <div>
-                            <div className="flex items-center gap-2">
-                                <div className="h-5 w-5 text-secondary" />
-                                Calidad Garantizada
-                            </div>
-                        </div>
-                        <div>
+            <div className="w-[85%] max-w-7xl mx-auto py-8 mt-8 m-auto">
+                <div className="container mx-auto px-4  flex flex-col gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="text-[#254168cc] text-[18px]">
                             <p>
-                                Trabajamos exclusivamente con fabricantes certificados y ofrecemos garantía en todos nuestros repuestos.
+                                En <span className="font-semibold">TECHNOLOGICAL SOLUTIONS AND CONTAINER HANDLING E.I.R.L.</span>, nos apasiona mantener en movimiento la maquinaria que impulsa los sectores portuario, minero y de construcción. Somos mucho más que un proveedor de servicios; somos su aliado estratégico, comprometido con la excelencia técnica y la satisfacción de nuestros clientes.
+                                Nuestra experiencia nos ha permitido desarrollar un profundo conocimiento en el soporte técnico y comercial de equipos especializados. Entendemos que cada minuto de inactividad representa un costo para su operación, por eso ofrecemos soluciones rápidas, eficientes y con los más altos estándares de calidad.
+                            </p>
+                            <p>
+                                <span className="font-semibold">Nuestro trabajo</span> se centra en brindar un servicio integral que abarca desde el mantenimiento preventivo, diseñado para anticipar y prevenir fallas, hasta intervenciones correctivas inmediatas cuando los equipos lo requieran. Utilizamos tecnología de vanguardia en mantenimiento predictivo para monitorear el estado de sus máquinas y actuar antes de que se presenten problemas mayores.
                             </p>
                         </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <div className="flex items-center gap-2">
-                                <Clock className="h-5 w-5 text-secondary" />
-                                Entrega Rápida
-                            </div>
-                        </div>
-                        <div>
-                            <p>Contamos con un amplio inventario y una logística eficiente para minimizar los tiempos de entrega.</p>
+                        <div className="bg-[url(/somos-img-info.avif)] h-[28rem] bg-center bg-cover ">
                         </div>
                     </div>
 
-                    <div>
-                        <div>
-                            <div className="flex items-center gap-2">
-                                <Users className="h-5 w-5 text-secondary" />
-                                Asesoría Técnica
+                    <div className="mt-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="border-2 border-[#254168] w-full h-auto rounded-xl p-6 text-center flex justify-center items-center flex-col gap-6">
+                                <FaBullseye className="text-[#f9cb21] text-8xl" />
+                                <h2 className="text-xl text-[#254168] font-bold">MISIÓN</h2>
+                                <div>
+                                    <p className="text-[#254168cc] text-[18px]">
+                                        Consolidarnos como una empresa líder en el sector portuario, construcción y minería brindando productos y servicios tecnológicos de alta calidad y garantía logrando así la confianza de nuestros clientes nacionales e internacionales.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="border-2 border-[#254168] w-full h-auto rounded-xl p-6 text-center flex justify-center items-center flex-col gap-6">
+                                <FaRegLightbulb className="text-[#f9cb21] text-8xl" />
+                                <h2 className="text-xl text-[#254168] font-bold">VISIÓN</h2>
+                                <div>
+                                    <p className="text-[#254168cc] text-[18px]">
+                                        Ser la empresa más innovadora del mercado brindando servicios confiables y de alta calidad, siendo así la mejor opción para nuestros clientes nacionales e internacionales.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <p>
-                                Nuestro equipo de especialistas brinda soporte técnico para ayudarte a encontrar la solución exacta que
-                                necesitas.
-                            </p>
+                    </div>
+
+                    <div className="flex flex-col gap-12">
+                        <div className="text-2xl text-[#254168] font-bold sm:text-3xl">
+                            <h2>Nuestros Valores</h2>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5">
+                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                                <FaBalanceScale className="text-[#f9ca2154] text-8xl" />
+                                <div className="p-4 absolute text-center">
+                                    <p className="text-2xl text-[#254168] font-bold">Integridad</p>
+                                    <span className="text-[#254168cc] font-semibold">Actuamos con honestidad y transparencia en cada decisión, fortaleciendo la confianza con nuestros clientes, colaboradores y aliados.</span>
+                                </div>
+                            </div>
+                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                                <FaHandshake className="text-[#f9ca2154] text-8xl" />
+                                <div className="p-4 absolute text-center">
+                                    <p className="text-2xl text-[#254168] font-bold">Compromiso</p>
+                                    <span className="text-[#254168cc] font-semibold">Nos dedicamos con pasión y responsabilidad a cumplir nuestras promesas, superando expectativas y generando impacto positivo.</span>
+                                </div>
+                            </div>
+                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                                <FaLightbulb className="text-[#f9ca2154] text-8xl" />
+                                <div className="p-4 absolute text-center">
+                                    <p className="text-2xl text-[#254168] font-bold">Innovación</p>
+                                    <span className="text-[#254168cc] font-semibold">Impulsamos ideas creativas y soluciones ágiles que nos permiten adaptarnos y liderar en un mundo en constante cambio.</span>
+                                </div>
+                            </div>
+                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                                <FaAward className="text-[#f9ca2154] text-8xl" />
+                                <div className="p-4 absolute text-center">
+                                    <p className="text-2xl text-[#254168] font-bold">Excelencia</p>
+                                    <span className="text-[#254168cc] font-semibold">Buscamos la mejora continua en todo lo que hacemos, ofreciendo productos y servicios de alta calidad que marcan la diferencia.</span>
+                                </div>
+                            </div>
+                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                                <FaLeaf className="text-[#f9ca2154] text-8xl" />
+                                <div className="p-4 absolute text-center">
+                                    <p className="text-2xl text-[#254168] font-bold">Sostenibilidad</p>
+                                    <span className="text-[#254168cc] font-semibold">Trabajamos de manera responsable con el medio ambiente y las comunidades, promoviendo un desarrollo equilibrado y consciente.</span>
+                                </div>
+                            </div>
+                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                                <FaUsers className="text-[#f9ca2154] text-8xl" />
+                                <div className="p-4 absolute text-center">
+                                    <p className="text-2xl text-[#254168] font-bold">Colaboración</p>
+                                    <span className="text-[#254168cc] font-semibold">Creemos en el poder del trabajo en equipo, fomentando un ambiente donde cada talento suma y las metas se alcanzan juntos.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-8">
+                        <div className="flex flex-col gap-2">
+                            <h2 className="text-2xl text-[#254168] font-bold text-center sm:text-3xl">
+                                ¿Por qué elegirnos?
+                            </h2>
+                            <div className="my-8">
+                                <div className="w-full mx-auto rounded-md shadow-md border border-gray-200">
+                                    <AccordionItem title="¿Por qué confiar en nuestra empresa para tus repuestos de maquinaria?">
+                                        Porque ofrecemos repuestos de alta calidad, diseñados para maximizar el rendimiento y la vida útil de tu equipo. Trabajamos con tecnología de vanguardia y proveedores certificados para garantizar soluciones confiables.
+                                    </AccordionItem>
+                                    <AccordionItem title="¿Qué nos hace diferentes de otras empresas del sector?">
+                                        No solo vendemos repuestos, ofrecemos soluciones. Nuestro equipo de expertos te asesora para encontrar el producto exacto que necesitas, evitando pérdidas de tiempo y dinero. Además, trabajamos con entregas rápidas y un servicio transparente.
+                                    </AccordionItem>
+                                    <AccordionItem title="¿Por qué nuestro servicio integral marca la diferencia?">
+                                        No solo vendemos repuestos, brindamos un servicio completo: asesoría experta, seguimiento continuo y soluciones a medida para maximizar la vida útil y eficiencia de tu maquinaria.
+                                    </AccordionItem>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Our Team */}
-            <div className="mt-20">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Nuestro Equipo</h2>
-                    <p className="mt-4 text-muted-foreground md:text-lg max-w-3xl mx-auto">
-                        Contamos con profesionales experimentados en el sector portuario y logístico
-                    </p>
-                </div>
-
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                    {[
-                        { name: "Carlos Rodríguez", position: "Director General", image: "/placeholder.svg?height=400&width=400" },
-                        {
-                            name: "Ana Martínez",
-                            position: "Gerente de Operaciones",
-                            image: "/placeholder.svg?height=400&width=400",
-                        },
-                        { name: "Miguel Sánchez", position: "Jefe de Logística", image: "/placeholder.svg?height=400&width=400" },
-                        { name: "Laura Gómez", position: "Especialista Técnico", image: "/placeholder.svg?height=400&width=400" },
-                    ].map((member, index) => (
-                        <div key={index} className="flex flex-col items-center text-center">
-                            <div className="relative h-40 w-40 rounded-full overflow-hidden mb-4">
-                                <img src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                            </div>
-                            <h3 className="font-bold">{member.name}</h3>
-                            <p className="text-muted-foreground">{member.position}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
 
         </div>
     )

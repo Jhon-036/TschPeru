@@ -67,7 +67,7 @@ const ShopMain = () => {
 
         {/* Categorías Populares */}
         <div className="mt-12" data-aos="fade-up">
-          <div className="fjustify-between items-center mb-4 gap-5">
+          <div className="flex justify-between items-center mb-4 gap-5">
             <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
               Categorías Populares
             </h3>
@@ -88,7 +88,7 @@ const ShopMain = () => {
                 data-aos-delay={`${index * 150}`}
               >
                 <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#f9cb21] text-white text-center">
-                  <h2 className="font-semibold text-[clamp(1rem,3vw,1.4rem)]">{category.name}</h2>
+                  <h2 className="font-semibold text-[clamp(1rem,2vw,1.2rem)]">{category.name}</h2>
                 </div>
               </div>
             ))}
@@ -108,7 +108,7 @@ const ShopMain = () => {
               </p>
             </Link>
           </div>
-          <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px] ">
+          <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
             {featuredParts.map((part, index) => (
               <div
                 key={index}
@@ -124,7 +124,7 @@ const ShopMain = () => {
                     <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] rounded-xl">
                       {part.category}
                     </span>
-                    <p className="font-bold text-[clamp(1rem,3vw,1.4rem)]">
+                    <p className="font-bold text-[clamp(1rem,3vw,1.1rem)]">
                       {part.name}
                     </p>
                   </div>
