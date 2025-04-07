@@ -80,7 +80,7 @@ const SliderMain = () => {
 
         {/* Slide 1 */}
         <SwiperSlide>
-          <div className='bg-[url(/tschperu--img--main1.webp)] h-[35rem] lg:h-[50rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
+          <div className='bg-[url(/tschperu--img--main1.jpg)] h-[35rem] lg:h-[50rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
@@ -96,7 +96,7 @@ const SliderMain = () => {
             </div>
           </div>
         </SwiperSlide>
-        
+
         {/* Navigation Buttons */}
         <div
           className="custom-prev absolute top-1/2 left-4 transform -translate-y-1/2 z-10 bg-white/20 p-1 rounded-full cursor-pointer hover:bg-white/30 transition-colors duration-300"

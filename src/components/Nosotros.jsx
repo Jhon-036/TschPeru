@@ -59,45 +59,45 @@ const Nosotros = () => {
                             <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
                                 <FaBalanceScale className="text-[#f9ca2154] text-8xl" />
                                 <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Integridad</p>
+                                    <p className="text-2xl text-[#254168] font-bold">Honestidad</p>
                                     <span className="text-[#254168cc] font-semibold">Actuamos con honestidad y transparencia en cada decisión, fortaleciendo la confianza con nuestros clientes, colaboradores y aliados.</span>
                                 </div>
                             </div>
                             <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
                                 <FaHandshake className="text-[#f9ca2154] text-8xl" />
                                 <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Compromiso</p>
+                                    <p className="text-2xl text-[#254168] font-bold">Calidad</p>
                                     <span className="text-[#254168cc] font-semibold">Nos dedicamos con pasión y responsabilidad a cumplir nuestras promesas, superando expectativas y generando impacto positivo.</span>
                                 </div>
                             </div>
                             <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
                                 <FaLightbulb className="text-[#f9ca2154] text-8xl" />
                                 <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Innovación</p>
+                                    <p className="text-2xl text-[#254168] font-bold">Eficiencia</p>
                                     <span className="text-[#254168cc] font-semibold">Impulsamos ideas creativas y soluciones ágiles que nos permiten adaptarnos y liderar en un mundo en constante cambio.</span>
                                 </div>
                             </div>
                             <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
                                 <FaAward className="text-[#f9ca2154] text-8xl" />
                                 <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Excelencia</p>
+                                    <p className="text-2xl text-[#254168] font-bold">Trato Personalizado</p>
                                     <span className="text-[#254168cc] font-semibold">Buscamos la mejora continua en todo lo que hacemos, ofreciendo productos y servicios de alta calidad que marcan la diferencia.</span>
                                 </div>
                             </div>
                             <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
                                 <FaLeaf className="text-[#f9ca2154] text-8xl" />
                                 <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Sostenibilidad</p>
+                                    <p className="text-2xl text-[#254168] font-bold">Mejora Continua</p>
                                     <span className="text-[#254168cc] font-semibold">Trabajamos de manera responsable con el medio ambiente y las comunidades, promoviendo un desarrollo equilibrado y consciente.</span>
                                 </div>
                             </div>
-                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
+                            {/* <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
                                 <FaUsers className="text-[#f9ca2154] text-8xl" />
                                 <div className="p-4 absolute text-center">
                                     <p className="text-2xl text-[#254168] font-bold">Colaboración</p>
                                     <span className="text-[#254168cc] font-semibold">Creemos en el poder del trabajo en equipo, fomentando un ambiente donde cada talento suma y las metas se alcanzan juntos.</span>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

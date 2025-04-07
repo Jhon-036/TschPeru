@@ -31,7 +31,7 @@ const Header = () => {
         <div className="">
           <li className="flex items-center space-x-3">
             <FiPhone className="h-5 w-5 text-[#254168]" />
-            <span className="text-[#254168] text-sm">+51 951 758 040</span>
+            <span className="text-[#254168] text-md font-bold">+51 951 758 040</span>
           </li>
         </div>
         <div>
