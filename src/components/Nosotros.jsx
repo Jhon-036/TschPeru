@@ -56,39 +56,39 @@ const Nosotros = () => {
                             <h2>Nuestros Valores</h2>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5">
-                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
-                                <FaBalanceScale className="text-[#f9ca2154] text-8xl" />
-                                <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Honestidad</p>
-                                    <span className="text-[#254168cc] font-semibold">Actuamos con honestidad y transparencia en cada decisión, fortaleciendo la confianza con nuestros clientes, colaboradores y aliados.</span>
+                            <div className="relative p-4 bg-[url(/honestidad--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
+                                {/* <FaHandshake className="text-[#f9ca2154] text-8xl" /> */}
+                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
+                                    <p className="text-2xl text-white font-bold">Honestidad</p>
+                                    {/* <span className="text-[#254168cc] font-semibold">Actuamos con transparencia y ética en todo momento.</span> */}
                                 </div>
                             </div>
-                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
-                                <FaHandshake className="text-[#f9ca2154] text-8xl" />
-                                <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Calidad</p>
-                                    <span className="text-[#254168cc] font-semibold">Nos dedicamos con pasión y responsabilidad a cumplir nuestras promesas, superando expectativas y generando impacto positivo.</span>
+                            <div className="relative p-4 bg-[url(/calidad--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
+                                {/* <FaHandshake className="text-[#f9ca2154] text-8xl" /> */}
+                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
+                                    <p className="text-2xl text-white font-bold">Calidad</p>
+                                    {/* <span className="text-[#254168cc] font-semibold">Ofrecemos productos y servicios que superan expectativas.</span> */}
                                 </div>
                             </div>
-                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
-                                <FaLightbulb className="text-[#f9ca2154] text-8xl" />
-                                <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Eficiencia</p>
-                                    <span className="text-[#254168cc] font-semibold">Impulsamos ideas creativas y soluciones ágiles que nos permiten adaptarnos y liderar en un mundo en constante cambio.</span>
+                            <div className="relative p-4 bg-[url(/eficiencia--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
+                                {/* <FaLightbulb className="text-[#f9ca2154] text-8xl" /> */}
+                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
+                                    <p className="text-2xl text-white font-bold">Eficiencia</p>
+                                    {/* <span className="text-[#254168cc] font-semibold">Optimizamos nuestros procesos para brindar soluciones rápidas y efectivas.</span> */}
                                 </div>
                             </div>
-                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
-                                <FaAward className="text-[#f9ca2154] text-8xl" />
-                                <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Trato Personalizado</p>
-                                    <span className="text-[#254168cc] font-semibold">Buscamos la mejora continua en todo lo que hacemos, ofreciendo productos y servicios de alta calidad que marcan la diferencia.</span>
+                            <div className="relative p-4 bg-[url(/trato--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
+                                {/* <FaAward className="text-[#f9ca2154] text-8xl" /> */}
+                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
+                                    <p className="text-2xl text-white font-bold">Trato Personalizado</p>
+                                    {/* <span className="text-[#254168cc] font-semibold">Brindamos atención única y soluciones adaptadas a cada cliente.</span> */}
                                 </div>
                             </div>
-                            <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
-                                <FaLeaf className="text-[#f9ca2154] text-8xl" />
-                                <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Mejora Continua</p>
-                                    <span className="text-[#254168cc] font-semibold">Trabajamos de manera responsable con el medio ambiente y las comunidades, promoviendo un desarrollo equilibrado y consciente.</span>
+                            <div className="relative p-4 bg-[url(/mejora--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
+                                {/* <FaLeaf className="text-[#f9ca2154] text-8xl" /> */}
+                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
+                                    <p className="text-2xl text-white font-bold">Mejora Continua</p>
+                                    {/* <span className="text-[#254168cc] font-semibold">Siempre buscamos aprender, crecer y mejorar nuestros servicios.</span> */}
                                 </div>
                             </div>
                             {/* <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
