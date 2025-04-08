@@ -46,10 +46,10 @@ const SliderMain = () => {
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
-                  Repuestos y accesorios esenciales para el óptimo desempeño.
+                Repuestos de calidad, rendimiento garantizado
                 </h2>
                 <p className='text-gray-100 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
-                  Calidad y confiabilidad garantizadas.
+                Repuestos originales y de calidad diseñados para los desafíos más exigentes.
                 </p>
                 <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
@@ -65,10 +65,10 @@ const SliderMain = () => {
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
-                  Asesoramiento personalizado en mantenimiento, instalación y repuestos.
+                Soporte experto, soluciones a tu medida.
                 </h2>
                 <p className='text-gray-100 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
-                  Confianza y desempeño garantizados en cada solución.
+                Servicio técnico especializado para mantener tu maquinaria siempre operativa.
                 </p>
                 <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
@@ -84,10 +84,10 @@ const SliderMain = () => {
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
-                  Una amplia gama de repuestos a su disposición.
+                Innovación y tecnología para potenciar tu maquinaria.
                 </h2>
                 <p className='text-gray-200 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
-                  Estamos comprometidos con la comercialización de productos de la más alta calidad.
+                Desarrollamos tecnología para optimizar operatividad, seguridad y mantenimiento a tus equipos.
                 </p>
                 <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
