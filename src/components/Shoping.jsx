@@ -50,7 +50,7 @@ export default function Shoping() {
 
   return (
     <div className="mt-16">
-      <div className="relative bg-[url(/about-company.jpg)] h-[30rem] bg-center bg-no-repeat bg-cover">
+      <div className="relative bg-[url(/about-company.jpg)] h-[18rem] sm:h-[30rem] bg-center bg-no-repeat bg-cover">
         <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
           <h2 className="text-white text-[clamp(1.2rem,5vw,3rem)]">NUESTROS PRODUCTOS</h2>
         </div>
@@ -58,11 +58,12 @@ export default function Shoping() {
       <div className="container mx-auto px-4 py-8">
 
         <div className="flex flex-col md:flex-row gap-6 my-11">
+          
           {/* Categorías  */}
-          <div className="hidden md:block w-64 shrink-0">
+          <div className="block  shrink-0">
             <div className="sticky top-4">
-              <h2 className="text-xl font-semibold mb-4 text-[#254168]">Categorías</h2>
-              <div className="space-y-2">
+              <h2 className="text-xl font-semibold text-[#254168]">Categorías</h2>
+              <div className="space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-8 md:flex md:flex-col">
                 <button
                   className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${!categoriaSeleccionada ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
                   onClick={() => setCategoriaSeleccionada(null)}
