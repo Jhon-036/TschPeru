@@ -58,7 +58,7 @@ export default function Shoping() {
       <div className="container mx-auto px-4 py-8">
 
         <div className="flex flex-col md:flex-row gap-6 my-11">
-          {/* Categorías - Desktop */}
+          {/* Categorías  */}
           <div className="hidden md:block w-64 shrink-0">
             <div className="sticky top-4">
               <h2 className="text-xl font-semibold mb-4 text-[#254168]">Categorías</h2>
@@ -91,7 +91,7 @@ export default function Shoping() {
                 <div className="animate-pulse text-[#254168]">Cargando productos...</div>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {productosFiltrados.map((producto) => (
                   <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
                     <div className="w-full aspect-square relative mb-4">
