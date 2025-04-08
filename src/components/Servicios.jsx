@@ -22,9 +22,9 @@ const Servicios = () => {
 
       <div className="mt-8 xl:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 xl:gap-8">
         {[
-          { image: '/service--installation.jpg', title: 'Repuestos de calidad, rendimiento garantizado' },
-          { image: '/service--mantenim.jpg', title: 'Soporte experto, soluciones a tu medida' },
-          { image: '/service--consulting.jpg', title: 'Inovación y tegnología para potenciar tu maquinaria' },
+          { image: '/service--installation.jpg', title: 'Mantenimiento integral de Maquinarias' },
+          { image: '/service--mantenim.jpg', title: 'Venta de Repuestos OEM' },
+          { image: '/service--consulting.jpg', title: 'Inovación y tegnología' },
         ].map((service, index) => (
           <div
             key={index}
