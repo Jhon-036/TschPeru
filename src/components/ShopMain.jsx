@@ -17,7 +17,7 @@ const ShopMain = () => {
     { name: "Montacargas", image: "/categories--filter.webp" },
     { name: "Portacontenedores", image: "/categories--electronic.webp" },
     { name: "Transmisiones", image: "/categories--brake.webp" },
-    { name: "Solenoides", image: "/categories--suspension.webp" },
+    { name: "Motores", image: "/categories--suspension.webp" },
   ];
 
   const featuredParts = [
@@ -57,11 +57,11 @@ const ShopMain = () => {
 
         {/* Título principal */}
         <div data-aos="fade-up">
-          <h2 className="text-[#254168] text-center font-bold text-[clamp(1.5rem,5vw,2.5rem)]">
-            Componentes de Calidad para el Mundo Automotriz
+          <h2 className="text-[#254168] text-center font-bold text-[clamp(1.5rem,5vw,3.2rem)]">
+            Potencia tu equipo, evoluciona con nosotros
           </h2>
-          <p className="text-center mt-4 text-[#254168cc] text-[clamp(0.9rem,2vw,1.2rem)] max-w-4xl mx-auto">
-            Ofrecemos una amplia selección de partes y accesorios de las mejores marcas para mantener tu vehículo en óptimas condiciones.
+          <p className="text-center mt-4 text-[#254168cc] text-[clamp(0.9rem,2vw,1.5rem)] max-w-4xl mx-auto">
+            Moderniza tu operación con soluciones que marcan la diferencia.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ const ShopMain = () => {
 
       {/* Video sección */}
       <div className="mt-12 relative" data-aos="fade-up">
-        <video src="/montacargasContenedores.mp4" autoPlay muted loop playsInline className="w-full h-[20rem] object-cover sm:h-[30rem]"></video>
+        <img src="/promociones -exclusivas-home.jpg" className="w-full h-[20rem] object-cover sm:h-[30rem]" />
         <div className="absolute inset-0 flex flex-col justify-center text-center bg-black/30 text-white p-4 gap-4">
           <h3 className="text-[clamp(1.2rem,5vw,3.5rem)] font-semibold">Promociones Exclusivas</h3>
           <p className="font-light leading-5 sm:leading-10 text-[clamp(0.9rem,2vw,1.5rem)] max-w-3xl mx-auto">

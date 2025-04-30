@@ -24,7 +24,7 @@ const Servicios = () => {
         {[
           { image: '/service--installation.jpg', title: 'Mantenimiento integral de Maquinarias' },
           { image: '/service--mantenim.jpg', title: 'Venta de Repuestos OEM' },
-          { image: '/service--consulting.jpg', title: 'Inovación y tegnología' },
+          { image: '/service--consulting.jpg', title: 'Innovación y tecnología' },
         ].map((service, index) => (
           <div
             key={index}

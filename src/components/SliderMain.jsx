@@ -42,14 +42,24 @@ const SliderMain = () => {
 
         {/* Slide 2 */}
         <SwiperSlide>
-          <div className='bg-[url(/tschperu--img--main2.webp)] h-[35rem] lg:h-[50rem] bg-cover bg-center bg-no-repeat flex justify-center items-center'>
+          <div className='relative h-[35rem] lg:h-[50rem] flex justify-center items-center'>
+            <video
+              className='absolute top-0 left-0 w-full h-full object-cover'
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src='/montacargasContenedores.mp4' type='video/mp4' />
+              Tu navegador no soporta el elemento de video.
+            </video>
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
-                Repuestos de calidad, rendimiento garantizado
+                  Repuestos de calidad, rendimiento garantizado
                 </h2>
                 <p className='text-gray-100 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
-                Repuestos originales y de calidad diseñados para los desafíos más exigentes.
+                  Repuestos originales y de calidad diseñados para los desafíos más exigentes.
                 </p>
                 <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
@@ -57,6 +67,7 @@ const SliderMain = () => {
               </div>
             </div>
           </div>
+
         </SwiperSlide>
 
         {/* Slide 3 */}
@@ -65,10 +76,10 @@ const SliderMain = () => {
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
-                Soporte experto, soluciones a tu medida.
+                  Soporte experto, soluciones a tu medida.
                 </h2>
                 <p className='text-gray-100 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
-                Servicio técnico especializado para mantener tu maquinaria siempre operativa.
+                  Servicio técnico especializado para mantener tu maquinaria siempre operativa.
                 </p>
                 <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
@@ -84,10 +95,10 @@ const SliderMain = () => {
             <div className='bg-black/25 h-full w-full flex justify-center items-center'>
               <div className='w-[90%] m-auto text-center flex flex-col items-center gap-4 sm:pt-12' data-aos="fade-up">
                 <h2 className='text-white uppercase text-[clamp(1.2rem,5vw,3rem)] font-bold' data-aos="fade-down" data-aos-delay="100">
-                Innovación y tecnología para potenciar tu maquinaria.
+                  Innovación y tecnología para potenciar tu maquinaria.
                 </h2>
                 <p className='text-gray-200 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
-                Desarrollamos tecnología para optimizar operatividad, seguridad y mantenimiento a tus equipos.
+                  Desarrollamos tecnología para optimizar operatividad, seguridad y mantenimiento a tus equipos.
                 </p>
                 <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más

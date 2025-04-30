@@ -8,7 +8,7 @@ export default function Shoping() {
   const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showEmailForm, setShowEmailForm] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", ruc: "", message: "" });
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -116,21 +116,21 @@ export default function Shoping() {
         {/* Modal con animación */}
         {quoteDialogOpen && (
           <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-            <div className="w-[85%] m-auto">
-              <div className="bg-white rounded-lg p-6 max-w-md w-full relative animate-accordion-down">
+            <div className="w-[85%]">
+              <div className="bg-white rounded-lg p-6 max-w-md w-full relative animate-accordion-down m-auto">
                 {!showEmailForm ? (
                   <>
                     <h2 className="text-xl font-bold text-[#254168] mb-4">Solicitar Cotización</h2>
                     <p className="mb-6">{selectedProduct && `Desea cotizar "${selectedProduct}" por:`}</p>
                     <div className="flex gap-4">
                       <button
-                        className="flex-1 bg-[#254168] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
+                        className="flex-1 cursor-pointer bg-[#254168] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
                         onClick={() => setShowEmailForm(true)}
                       >
                         <FaEnvelope className="mr-2" /> Correo
                       </button>
                       <button
-                        className="flex-1 bg-[#25D366] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
+                        className="flex-1 cursor-pointer bg-[#25D366] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
                         onClick={() => setQuoteDialogOpen(false)}
                       >
                         <FaWhatsapp className="mr-2" /> WhatsApp
@@ -140,7 +140,7 @@ export default function Shoping() {
                 ) : (
                   <div className="">
                     <button className="text-[#254168] pb-8" onClick={() => setShowEmailForm(false)}>
-                      <FaArrowLeft />
+                      <FaArrowLeft className="cursor-pointer" />
                     </button>
                     <h2 className="text-xl font-bold text-[#254168] mb-4">Formulario de Cotización</h2>
                     <form onSubmit={handleFormSubmit} className="space-y-4 animate-accordion-down">
@@ -174,7 +174,7 @@ export default function Shoping() {
                         <input
                           type="number"
                           name="ruc"
-                          value={formData.phone}
+                          value={formData.ruc}
                           onChange={handleInputChange}
                           placeholder="Numero Ruc"
                           className="w-full p-2 border rounded"

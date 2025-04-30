@@ -56,48 +56,26 @@ const Nosotros = () => {
                             <h2>Nuestros Valores</h2>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5">
-                            <div className="relative p-4 bg-[url(/honestidad--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
-                                {/* <FaHandshake className="text-[#f9ca2154] text-8xl" /> */}
-                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
-                                    <p className="text-2xl text-white font-bold">Honestidad</p>
-                                    {/* <span className="text-[#254168cc] font-semibold">Actuamos con transparencia y ética en todo momento.</span> */}
-                                </div>
+                            <div className="flex flex-col items-center pb-8">
+                                <img src="honestidad-logo.png" alt="" className="w-[128px]"/>
+                                <p>Honestidad</p>
                             </div>
-                            <div className="relative p-4 bg-[url(/calidad--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
-                                {/* <FaHandshake className="text-[#f9ca2154] text-8xl" /> */}
-                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
-                                    <p className="text-2xl text-white font-bold">Calidad</p>
-                                    {/* <span className="text-[#254168cc] font-semibold">Ofrecemos productos y servicios que superan expectativas.</span> */}
-                                </div>
+                            <div className="flex flex-col items-center pb-8">
+                                <img src="calidad-logo.png" alt="" className="w-[128px]"/>
+                                <p>Calidad</p>
                             </div>
-                            <div className="relative p-4 bg-[url(/eficiencia--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
-                                {/* <FaLightbulb className="text-[#f9ca2154] text-8xl" /> */}
-                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
-                                    <p className="text-2xl text-white font-bold">Eficiencia</p>
-                                    {/* <span className="text-[#254168cc] font-semibold">Optimizamos nuestros procesos para brindar soluciones rápidas y efectivas.</span> */}
-                                </div>
+                            <div className="flex flex-col items-center pb-8">
+                                <img src="eficiencia-logo.png" alt="" className="w-[128px]"/>
+                                <p>Eficiencia</p>
                             </div>
-                            <div className="relative p-4 bg-[url(/trato--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
-                                {/* <FaAward className="text-[#f9ca2154] text-8xl" /> */}
-                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
-                                    <p className="text-2xl text-white font-bold">Trato Personalizado</p>
-                                    {/* <span className="text-[#254168cc] font-semibold">Brindamos atención única y soluciones adaptadas a cada cliente.</span> */}
-                                </div>
+                            <div className="flex flex-col items-center pb-8">
+                                <img src="trato-logo.png" alt="" className="w-[128px]"/>
+                                <p>Buen trato</p>
                             </div>
-                            <div className="relative p-4 bg-[url(/mejora--nosotros.jpg)] bg-center bg-cover flex justify-center items-center h-[14rem] shadow-[rgba(2 2 2 2.5)] uppercase">
-                                {/* <FaLeaf className="text-[#f9ca2154] text-8xl" /> */}
-                                <div className="p-4 h-full w-full flex flex-col items-center justify-center gap-2 absolute bg-[#25416854] text-center">
-                                    <p className="text-2xl text-white font-bold">Mejora Continua</p>
-                                    {/* <span className="text-[#254168cc] font-semibold">Siempre buscamos aprender, crecer y mejorar nuestros servicios.</span> */}
-                                </div>
+                            <div className="flex flex-col items-center pb-8">
+                                <img src="mejora-logo.png" alt="" className="w-[128px]"/>
+                                <p>Mejora continua</p>
                             </div>
-                            {/* <div className="relative p-4 bg-[#ececec] flex justify-center items-center h-[14rem] border-2 border-[#254168]">
-                                <FaUsers className="text-[#f9ca2154] text-8xl" />
-                                <div className="p-4 absolute text-center">
-                                    <p className="text-2xl text-[#254168] font-bold">Colaboración</p>
-                                    <span className="text-[#254168cc] font-semibold">Creemos en el poder del trabajo en equipo, fomentando un ambiente donde cada talento suma y las metas se alcanzan juntos.</span>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
 

@@ -49,10 +49,10 @@ const Footer = () => {
                 <FiMapPin className="h-5 w-5 text-[#254168] shrink-0 mt-1" />
                 <span className="text-[#254168]">Lima, Lima, Perú</span>
               </li>
-              <li className="flex items-center space-x-3">
+              <a href='tel:951758040' className="flex items-center space-x-3">
                 <FiPhone className="h-5 w-5 text-[#254168]" />
                 <span className="text-[#254168]">+51 951 758 040</span>
-              </li>
+              </a>
               <li className="flex items-center space-x-3">
                 <FiMail className="h-5 w-5 text-[#254168]" />
                 <span className="text-[#254168]">tschperu@tschperu.com</span>

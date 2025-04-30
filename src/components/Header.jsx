@@ -10,6 +10,7 @@ import { IoIosArrowDown } from "react-icons/io"
 
 const Header = () => {
   const [isShowNav, setIsShowNav] = useState(false)
+  const [isShowNavMovile, setIsShowNavMovile] = useState(false)
 
   useEffect(() => {
     AOS.init({
@@ -21,6 +22,11 @@ const Header = () => {
   const handleIsShowNav = () => {
     setIsShowNav(!isShowNav)
   }
+
+  const handleIsShowNavMobile = () => {
+    setIsShowNavMovile(!isShowNavMovile)
+  }
+
   const handleNotShowNav = () => {
     setIsShowNav(false)
   }
@@ -29,25 +35,25 @@ const Header = () => {
     <header className="w-full  shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
       <div className="bg-[#f9cb21] p-[4px] flex justify-evenly items-center">
         <div className="">
-          <li className="flex items-center space-x-3">
+          <a href='tel:951758040' className="flex items-center space-x-3 cursor-pointer">
             <FiPhone className="h-5 w-5 text-[#254168]" />
             <span className="text-[#254168] text-md font-bold">+51 951 758 040</span>
-          </li>
+          </a>
         </div>
         <div>
           <div className="flex gap-2">
-            <li href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
               <BiLogoInstagramAlt className="text-sm md:text-[18px] cursor-pointer" />
-            </li>
-            <li href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
               <BiLogoFacebook className="text-sm md:text-[18px] cursor-pointer" />
-            </li>
-            <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
               <FaYoutube className="text-sm md:text-[18px] cursor-pointer" />
-            </li>
-            <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
               <IoLogoTiktok className="text-sm md:text-[18px] cursor-pointer" />
-            </li>
+            </a>
           </div>
         </div>
       </div>
@@ -75,14 +81,24 @@ const Header = () => {
                 <Link to="/productos">
                   <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Productos</li>
                 </Link>
-                <Link to="/servicios">
-                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center">Servicios<IoIosArrowDown /></li>
-                </Link>
+                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
+                    <div className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                      <Link to="/Servicio-Mantenimiento-integral-de-maquinarias">
+                        <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
+                      </Link>
+                      <Link to="Servicio-Venta-de-repuestos-OEM">
+                        <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
+                      </Link>
+                      <Link to="Servicio-Innovacion-y-tegnologia">
+                        <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
+                      </Link>
+                    </div>
+                  </li>
               </ul>
 
               {/* Contact Button */}
               <button className="uppercase p-2 lg:px-5 lg:py-3 bg-[#f9cb21] text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
-                <span href="#">Contactos</span>
+                <span>Contactos</span>
               </button>
 
               {/* Mobile Menu Icon */}
@@ -118,9 +134,13 @@ const Header = () => {
                 <Link to={"/productos"}>
                   <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Productos</li>
                 </Link>
-                <Link to={"/servicios"}>
-                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Servicios</li>
-                </Link>
+                  <li className="p-3 text-[#254168] relative hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300 flex items-center gap-2" onClick={handleIsShowNavMobile}>Servicios<IoIosArrowDown />
+                    <div className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
+                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
+                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
+                    </div>
+                  </li>
               </ul>
             </div>
           </div>
