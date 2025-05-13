@@ -2,7 +2,7 @@
   {
     "nombre": "Producto 1",
     "descripcion": "Descripción detallada del producto 1.",
-    "category": "Conectores automotrices",
+    "category": "Conectores automotrices e industriales",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -12,7 +12,7 @@
   {
     "nombre": "Producto 2",
     "descripcion": "Descripción detallada del producto 2.",
-    "category": "Solenoides",
+    "category": "Componentes hidraulicos",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -52,7 +52,7 @@
   {
     "nombre": "Producto 4",
     "descripcion": "Descripción detallada del producto 4.",
-    "category": "Conectores automotrices",
+    "category": "Conectores automotrices e industriales",
     "quality": "Premium",
     "popularity": "Más Vendido",
     "image": [
@@ -62,7 +62,7 @@
   {
     "nombre": "Producto 5",
     "descripcion": "Descripción detallada del producto 5.",
-    "category": "Conectores industriales",
+    "category": "Conectores automotrices e industriales",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -72,7 +72,7 @@
   {
     "nombre": "Producto 6",
     "descripcion": "Descripción detallada del producto 6.",
-    "category": "Solenoides",
+    "category": "Componentes hidraulicos",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -152,7 +152,7 @@
   {
     "nombre": "Producto 12",
     "descripcion": "Descripción detallada del producto 12.",
-    "category": "Solenoides",
+    "category": "Componentes hidraulicos",
     "quality": "Premium",
     "popularity": "Más Vendido",
     "image": [
@@ -162,7 +162,7 @@
   {
     "nombre": "Producto 13",
     "descripcion": "Descripción detallada del producto 13.",
-    "category": "Conectores automotrices",
+    "category": "Conectores automotrices e industriales",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -172,7 +172,7 @@
   {
     "nombre": "Producto 13",
     "descripcion": "Descripción detallada del producto 13.",
-    "category": "Conectores automotrices",
+    "category": "Conectores automotrices e industriales",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -182,7 +182,7 @@
   {
     "nombre": "Producto 13",
     "descripcion": "Descripción detallada del producto 13.",
-    "category": "Conectores automotrices",
+    "category": "Conectores automotrices e industriales",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -242,7 +242,7 @@
   {
     "nombre": "Producto 16",
     "descripcion": "Descripción detallada del producto 16.",
-    "category": "Conectores industriales",
+    "category": "Conectores automotrices e industriales",
     "quality": "Premium",
     "popularity": "Más Vendido",
     "image": [
@@ -252,7 +252,7 @@
   {
     "nombre": "Producto 17",
     "descripcion": "Descripción detallada del producto 17.",
-    "category": "Bosch",
+    "category": "Otros componentes",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -262,7 +262,7 @@
   {
     "nombre": "Producto 18",
     "descripcion": "Descripción detallada del producto 18.",
-    "category": "Conectores industriales",
+    "category": "Conectores automotrices e industriales",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -282,7 +282,7 @@
   {
     "nombre": "Producto 20",
     "descripcion": "Descripción detallada del producto 20.",
-    "category": "Solenoides",
+    "category": "Componentes hidraulicos",
     "quality": "Premium",
     "popularity": "Más Vendido",
     "image": [
@@ -292,7 +292,7 @@
   {
     "nombre": "Producto 21",
     "descripcion": "Descripción detallada del producto 21.",
-    "category": "Solenoides",
+    "category": "Componentes hidraulicos",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -302,7 +302,7 @@
   {
     "nombre": "Producto 22",
     "descripcion": "Descripción detallada del producto 22.",
-    "category": "Delco remy",
+    "category": "Otros componentes",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -312,7 +312,7 @@
   {
     "nombre": "Producto 22",
     "descripcion": "Descripción detallada del producto 22.",
-    "category": "Delco remy",
+    "category": "Otros componentes",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -322,7 +322,7 @@
   {
     "nombre": "Producto 22",
     "descripcion": "Descripción detallada del producto 22.",
-    "category": "Delco remy",
+    "category": "Otros componentes",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -332,7 +332,7 @@
   {
     "nombre": "Producto 22",
     "descripcion": "Descripción detallada del producto 22.",
-    "category": "Delco remy",
+    "category": "Otros componentes",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -342,7 +342,7 @@
   {
     "nombre": "Producto 22",
     "descripcion": "Descripción detallada del producto 22.",
-    "category": "Delco remy",
+    "category": "Otros componentes",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -352,7 +352,7 @@
   {
     "nombre": "Producto 22",
     "descripcion": "Descripción detallada del producto 22.",
-    "category": "Delco remy",
+    "category": "Otros componentes",
     "quality": "Reforzado",
     "popularity": "Nuevo",
     "image": [
@@ -362,7 +362,7 @@
   {
     "nombre": "Producto 23",
     "descripcion": "Descripción detallada del producto 23.",
-    "category": "Conectores industriales",
+    "category": "Conectores automotrices e industriales",
     "quality": "Genuino",
     "popularity": "Oferta",
     "image": [
@@ -372,7 +372,7 @@
   {
     "nombre": "Producto 23",
     "descripcion": "Descripción detallada del producto 23.",
-    "category": "Conectores industriales",
+    "category": "Conectores automotrices e industriales",
     "quality": "Genuino",
     "popularity": "Oferta",
     "image": [
@@ -382,7 +382,7 @@
   {
     "nombre": "Producto 23",
     "descripcion": "Descripción detallada del producto 23.",
-    "category": "Conectores industriales",
+    "category": "Conectores automotrices e industriales",
     "quality": "Genuino",
     "popularity": "Oferta",
     "image": [
@@ -402,7 +402,7 @@
   {
     "nombre": "Producto 25",
     "descripcion": "Descripción detallada del producto 25.",
-    "category": "Solenoides",
+    "category": "Componentes hidraulicos",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -472,7 +472,7 @@
   {
     "nombre": "Producto 29",
     "descripcion": "Descripción detallada del producto 29.",
-    "category": "Bosch",
+    "category": "Otros componentes",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -482,7 +482,7 @@
   {
     "nombre": "Producto 29",
     "descripcion": "Descripción detallada del producto 29.",
-    "category": "Bosch",
+    "category": "Otros componentes",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [
@@ -492,7 +492,7 @@
   {
     "nombre": "Producto 29",
     "descripcion": "Descripción detallada del producto 29.",
-    "category": "Bosch",
+    "category": "Otros componentes",
     "quality": "Profesional",
     "popularity": "Recomendado",
     "image": [

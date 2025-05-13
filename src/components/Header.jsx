@@ -83,13 +83,13 @@ const Header = () => {
                 </Link>
                   <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
                     <div className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                      <Link to="/Servicio-Mantenimiento-integral-de-maquinarias">
+                      <Link to="/Servicio-mantenimiento-integral-de-maquinarias">
                         <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
                       </Link>
-                      <Link to="Servicio-Venta-de-repuestos-OEM">
+                      <Link to="Servicio-venta-de-repuestos-OEM">
                         <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
                       </Link>
-                      <Link to="Servicio-Innovacion-y-tegnologia">
+                      <Link to="Servicio-innovacion-y-tegnologia">
                         <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
                       </Link>
                     </div>
@@ -98,7 +98,7 @@ const Header = () => {
 
               {/* Contact Button */}
               <button className="uppercase p-2 lg:px-5 lg:py-3 bg-[#f9cb21] text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
-                <span>Contactos</span>
+                <span>Contáctenos</span>
               </button>
 
               {/* Mobile Menu Icon */}
@@ -136,9 +136,15 @@ const Header = () => {
                 </Link>
                   <li className="p-3 text-[#254168] relative hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300 flex items-center gap-2" onClick={handleIsShowNavMobile}>Servicios<IoIosArrowDown />
                     <div className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
-                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
-                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
+                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">
+                        <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
+                      </Link>
+                      <Link to="Servicio-venta-de-repuestos-OEM">
+                        <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
+                      </Link>
+                      <Link to="Servicio-innovacion-y-tegnologia">
+                        <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
+                      </Link>
                     </div>
                   </li>
               </ul>

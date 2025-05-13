@@ -14,10 +14,10 @@ const ShopMain = () => {
   }, []);
 
   const featuredCategories = [
-    { name: "Montacargas", image: "/categories--filter.webp" },
-    { name: "Portacontenedores", image: "/categories--electronic.webp" },
-    { name: "Transmisiones", image: "/categories--brake.webp" },
-    { name: "Motores", image: "/categories--suspension.webp" },
+    { name: "Montacargas", image: "/maquinaria-inicio.png" },
+    { name: "Portacontenedores", image: "/portacontenedores-inicio.png" },
+    { name: "Transmisiones", image: "/transmision-inicio.png" },
+    { name: "Motores", image: "/motor-inicio.png" },
   ];
 
   const featuredParts = [
@@ -26,28 +26,28 @@ const ShopMain = () => {
       category: "Filtros",
       quality: "Premium",
       popularity: "Más Vendido",
-      image: "/filter--AceitePremiumx500.png",
+      image: "/electrovalvula-parker.png",
     },
     {
       name: "Batería de Alto Rendimiento",
       category: "Eléctrico",
       quality: "Premium",
       popularity: "Recomendado",
-      image: "/elect--bateriaCatx500.png",
+      image: "/selector-de-marcha.png",
     },
     {
       name: "Juego de Frenos Cerámicos",
       category: "Frenos",
       quality: "Reforzado",
       popularity: "Más Vendido",
-      image: "/fren--juegoFrenoCeramicox500.png",
+      image: "/sensor-inductivo-m18.png",
     },
     {
       name: "Kit de Embrague Completo",
       category: "Transmisión",
       quality: "Genuino",
       popularity: "Más Vendido",
-      image: "/trans--kitEmbriague.png",
+      image: "/sensor-inductivo-m30.png",
     },
   ];
 

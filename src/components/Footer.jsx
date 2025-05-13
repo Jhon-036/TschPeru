@@ -55,7 +55,7 @@ const Footer = () => {
               </a>
               <li className="flex items-center space-x-3">
                 <FiMail className="h-5 w-5 text-[#254168]" />
-                <span className="text-[#254168]">tschperu@tschperu.com</span>
+                <span className="text-[#254168]">tschperu@outlook.com</span>
               </li>
             </ul>
           </div>
@@ -81,18 +81,18 @@ const Footer = () => {
           <div className="text-sm text-center md:text-left">© 2025 TSCH Perú. Todos los derechos reservados.</div>
 
             <div className="flex space-x-4">
-              <li href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
+              <a href="https://www.instagram.com/tschperu?igsh=MWlkenRsYXd6a2ZpMQ==" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
                 <BiLogoInstagramAlt className="h-6 w-6 cursor-pointer" />
-              </li>
-              <li href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
+              </a>
+              <a href="https://www.facebook.com/share/191qaCP9P8/" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
                 <BiLogoFacebook className="h-6 w-6 cursor-pointer" />
-              </li>
-              <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
                 <FaYoutube className="h-6 w-6 cursor-pointer" />
-              </li>
-              <li href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-[#254168] hover:text-[#254168] list-none">
                 <IoLogoTiktok className="h-6 w-6 cursor-pointer" />
-              </li>
+              </a>
             </div>
           <div className="flex items-center space-x-3 text-[#254168] text-sm">
             <BiGlobe className="h-4 w-4"/>

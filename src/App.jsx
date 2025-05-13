@@ -19,9 +19,9 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/productos' element={<Shop />}/>
         <Route path='/nosotros' element={<About />}/>
-        <Route path='/Servicio-Mantenimiento-integral-de-maquinarias' element={<Service1 />}/>
-        <Route path='/Servicio-Venta-de-repuestos-OEM' element={<Service2 />}/>
-        <Route path='/Servicio-Innovacion-y-tegnologia' element={<Service3 />}/>
+        <Route path='/Servicio-mantenimiento-integral-de-maquinarias' element={<Service1 />}/>
+        <Route path='/Servicio-venta-de-repuestos-OEM' element={<Service2 />}/>
+        <Route path='/Servicio-innovacion-y-tegnologia' element={<Service3 />}/>
       </Routes>
       <Footer />
     </Router>

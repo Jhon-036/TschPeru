@@ -5,6 +5,9 @@ export default function Shoping() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [productos, setProductos] = useState([]);
 
+  const [paginaActual, setPaginaActual] = useState(1);
+  const productosPorPagina = 12;
+
   const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showEmailForm, setShowEmailForm] = useState(false);
@@ -26,6 +29,15 @@ export default function Shoping() {
   const productosFiltrados = categoriaSeleccionada
     ? productos.filter((producto) => producto.category === categoriaSeleccionada)
     : productos;
+
+  const totalPaginas = Math.ceil(productosFiltrados.length / productosPorPagina);
+  const indiceInicial = (paginaActual - 1) * productosPorPagina;
+  const indiceFinal = indiceInicial + productosPorPagina;
+  const productosVisibles = productosFiltrados.slice(indiceInicial, indiceFinal);
+
+  useEffect(() => {
+    setPaginaActual(1);
+  }, [categoriaSeleccionada]);
 
   const categorias = productos.length > 0 ? [...new Set(productos.map((producto) => producto.category))] : [];
 
@@ -60,8 +72,8 @@ export default function Shoping() {
         <div className="flex flex-col md:flex-row gap-6 my-11">
           
           {/* Categorías  */}
-          <div className="block  shrink-0">
-            <div className="sticky top-4">
+          <div className="block shrink-0">
+            <div className="sticky top-44">
               <h2 className="text-xl font-semibold text-[#254168]">Categorías</h2>
               <div className="space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-8 md:flex md:flex-col">
                 <button
@@ -92,28 +104,41 @@ export default function Shoping() {
                 <div className="animate-pulse text-[#254168]">Cargando productos...</div>
               </div>
             ) : (
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {productosFiltrados.map((producto) => (
-                  <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
-                    <div className="w-full aspect-square relative mb-4">
-                      <img src={producto.image || "/placeholder.svg"} alt={producto.name} className="object-cover w-full h-full" />
+              <>
+                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {productosVisibles.map((producto) => (
+                    <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                      <div className="w-full aspect-square relative mb-4">
+                        <img src={producto.image || "/placeholder.svg"} alt={producto.name} className="object-cover w-full h-full" />
+                      </div>
+                      <h3 className="font-semibold text-lg text-[#254168]">{producto.name}</h3>
+                      <p className="text-sm text-[#254168]/70 mb-2">{producto.category}</p>
+                      <button
+                        className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
+                        onClick={() => handleQuoteClick(producto.name)}
+                      >
+                        Cotizar
+                      </button>
                     </div>
-                    <h3 className="font-semibold text-lg text-[#254168]">{producto.name}</h3>
-                    <p className="text-sm text-[#254168]/70 mb-2">{producto.category}</p>
+                  ))}
+                </div>
+
+                {/* Paginación */}
+                <div className="flex justify-center mt-8 gap-2 flex-wrap">
+                  {[...Array(totalPaginas)].map((_, index) => (
                     <button
-                      className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
-                      onClick={() => handleQuoteClick(producto.name)}
+                      key={index}
+                      onClick={() => setPaginaActual(index + 1)}
+                      className={`px-4 py-2 rounded border ${paginaActual === index + 1 ? 'bg-[#254168] text-white' : 'bg-gray-100 text-[#254168]'}`}
                     >
-                      Cotizar
+                      {index + 1}
                     </button>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              </>
             )}
           </div>
-        </div>
-
-        {/* Modal con animación */}
+          {/* Modal con animación */}
         {quoteDialogOpen && (
           <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
             <div className="w-[85%]">
@@ -199,6 +224,7 @@ export default function Shoping() {
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   );
