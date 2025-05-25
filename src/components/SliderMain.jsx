@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -9,6 +10,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const SliderMain = () => {
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -61,9 +64,11 @@ const SliderMain = () => {
                 <p className='text-gray-100 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
                   Repuestos originales y de calidad diseñados para los desafíos más exigentes.
                 </p>
-                <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
-                  Ver más
-                </button>
+                <div>
+                  <button onClick={() => navigate("/Servicio-venta-de-repuestos-OEM")} className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
+                    Ver más
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -81,7 +86,7 @@ const SliderMain = () => {
                 <p className='text-gray-100 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
                   Servicio técnico especializado para mantener tu maquinaria siempre operativa.
                 </p>
-                <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
+                <button onClick={() => navigate("/Servicio-mantenimiento-integral-de-maquinarias")} className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
                 </button>
               </div>
@@ -100,7 +105,7 @@ const SliderMain = () => {
                 <p className='text-gray-200 text-[clamp(0.9rem,2.5vw,1.5rem)] max-w-2xl' data-aos="fade-up" data-aos-delay="200">
                   Desarrollamos tecnología para optimizar operatividad, seguridad y mantenimiento a tus equipos.
                 </p>
-                <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
+                <button onClick={() => navigate("/Servicio-innovacion-y-tegnologia")} className="uppercase p-2 mt-2 bg-[#f9cb21] w-24 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                   Ver más
                 </button>
               </div>

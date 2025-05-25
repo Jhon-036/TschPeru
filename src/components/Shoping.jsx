@@ -129,7 +129,7 @@ export default function Shoping() {
                     <button
                       key={index}
                       onClick={() => setPaginaActual(index + 1)}
-                      className={`px-4 py-2 rounded border ${paginaActual === index + 1 ? 'bg-[#254168] text-white' : 'bg-gray-100 text-[#254168]'}`}
+                      className={`px-4 py-2 cursor-pointer rounded border ${paginaActual === index + 1 ? 'bg-[#254168] text-white' : 'bg-gray-100 text-[#254168]'}`}
                     >
                       {index + 1}
                     </button>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import AOS from "aos";
@@ -6,6 +7,8 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
 const ShopMain = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -153,7 +156,7 @@ const ShopMain = () => {
           <p className="font-light leading-5 sm:leading-10 text-[clamp(0.9rem,2vw,1.5rem)] max-w-3xl mx-auto">
             Aprovecha nuestras rebajas en productos seleccionados.
           </p>
-          <button className="uppercase p-2 mt-2 bg-[#f9cb21] w-28 text-white font-semibold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300 mx-auto">Ver más</button>
+          <button onClick={() => navigate("/productos")} className="uppercase p-2 mt-2 bg-[#f9cb21] w-28 text-white font-semibold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300 mx-auto">Ver más</button>
         </div>
       </div>
     </div>
