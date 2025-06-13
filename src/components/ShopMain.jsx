@@ -140,69 +140,74 @@ const ShopMain = () => {
       </div>
 
       {/* Marcas */}
-      <section className=" w-full bg-white py-2">
-        <div className="w-[85%] max-w-7xl mx-auto py-10 m-auto">
+      <section className="w-full bg-white py-2">
+        <div className="w-[85%] max-w-7xl mx-auto py-10">
           <h2 className="text-center text-3xl text-[#254168] font-semibold">Nuestras Marcas</h2>
           <p className="text-center mt-2.5 text-[18px]">Trabajamos con las mejores marcas del mercado para garantizar la calidad y confiabilidad de todos nuestros productos y servicios.</p>
         </div>
-        <div className="flex flex-col gap-8 items-center py-16 overflow-x-auto">
-          <div className="flex gap-8">
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/atos.png" className="w-full" alt="tsch-atos" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/cat.png" className="w-full" alt="tsch-cat" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/danfoss.png" className="w-full" alt="tsch-danfoss" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/hyundai.png" className="w-full" alt="tsch-hyundai" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/hyster.png" className="w-full" alt="tsch-hyster" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/kalmar.png" className="w-full" alt="tsch-kalmar" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/komatsu.png" className="w-full" alt="tsch-komatsu" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/konecranes.png" className="w-full" alt="tsch-konecranes" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/liebherr.png" className="w-full" alt="tsch-liebherr" />
+        <div className="py-16 overflow-x-auto w-[85%] m-auto flex flex-col gap-8">
+          <div className="flex gap-8 w-full">
+            <div className="flex gap-8 min-w-max"> {/* Aquí hemos aplicado min-w-max para evitar que las imágenes se recorten o se ajusten en pantallas pequeñas */}
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/public/atos.png" className="w-full" alt="tsch-atos" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/cat.png" className="w-full" alt="tsch-cat" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/danfoss.png" className="w-full" alt="tsch-danfoss" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/hyundai.png" className="w-full" alt="tsch-hyundai" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/hyster.png" className="w-full" alt="tsch-hyster" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/kalmar.png" className="w-full" alt="tsch-kalmar" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/komatsu.png" className="w-full" alt="tsch-komatsu" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/konecranes.png" className="w-full" alt="tsch-konecranes" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/liebherr.png" className="w-full" alt="tsch-liebherr" />
+              </div>
             </div>
           </div>
-          <div className="flex gap-8">
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/pyf.png" className="w-full" alt="tsch-p&f" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/rexroth.png" className="w-full" alt="tsch-rexroth&f" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/sennebogen.png" className="w-full" alt="tsch-sennebogen" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/spicer.png" className="w-full" alt="tsch-spicer" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/sun-hidraulics.png" className="w-full" alt="tsch-sun-hidraulics" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/terex.png" className="w-full" alt="tsch-terex" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/toyota.png" className="w-full" alt="tsch-toyota" />
-            </div>
-            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-              <img src="/public/volvo.png" className="w-full" alt="tsch-volvo" />
+          <div className="flex gap-8 w-full">
+            <div className="flex gap-8 min-w-max"> {/* Igualmente aquí */}
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/pyf.png" className="w-full" alt="tsch-p&f" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/rexroth.png" className="w-full" alt="tsch-rexroth&f" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/sennebogen.png" className="w-full" alt="tsch-sennebogen" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/spicer.png" className="w-full" alt="tsch-spicer" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/sun-hidraulics.png" className="w-full" alt="tsch-sun-hidraulics" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/terex.png" className="w-full" alt="tsch-terex" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/toyota.png" className="w-full" alt="tsch-toyota" />
+              </div>
+              <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+                <img src="/volvo.png" className="w-full" alt="tsch-volvo" />
+              </div>
             </div>
           </div>
         </div>
       </section>
+
 
     </div>
   );
