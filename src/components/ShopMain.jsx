@@ -145,11 +145,11 @@ const ShopMain = () => {
           <h2 className="text-center text-3xl text-[#254168] font-semibold">Nuestras Marcas</h2>
           <p className="text-center mt-2.5 text-[18px]">Trabajamos con las mejores marcas del mercado para garantizar la calidad y confiabilidad de todos nuestros productos y servicios.</p>
         </div>
-        <div className="py-16 overflow-x-auto w-[85%] m-auto flex flex-col gap-8">
-          <div className="flex gap-8 w-full">
+        <div className="py-16 overflow-x-auto w-[85%] max-w-7xl m-auto flex flex-col gap-8">
+          <div className="flex gap-8 w-[85%] max-w-7xl">
             <div className="flex gap-8 min-w-max"> {/* Aquí hemos aplicado min-w-max para evitar que las imágenes se recorten o se ajusten en pantallas pequeñas */}
               <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
-                <img src="/public/atos.png" className="w-full" alt="tsch-atos" />
+                <img src="/atos.png" className="w-full" alt="tsch-atos" />
               </div>
               <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
                 <img src="/cat.png" className="w-full" alt="tsch-cat" />
@@ -177,7 +177,7 @@ const ShopMain = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-8 w-full">
+          <div className="flex gap-8 w-[85%] max-w-7xl">
             <div className="flex gap-8 min-w-max"> {/* Igualmente aquí */}
               <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
                 <img src="/pyf.png" className="w-full" alt="tsch-p&f" />
