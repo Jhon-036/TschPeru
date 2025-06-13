@@ -107,18 +107,29 @@ export default function Shoping() {
               <>
                 <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {productosVisibles.map((producto) => (
-                    <div key={producto.id} className="border p-4 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
-                      <div className="w-full aspect-square relative mb-4">
-                        <img src={producto.image || "/placeholder.svg"} alt={producto.name} className="object-cover w-full h-full" />
+                    <div key={producto.id} className="rounded shadow-md transition-transform duration-300 hover:scale-105">
+                      <div className="w-full aspect-square relative ro">
+                        <img src={producto.image} alt={producto.name} className="object-cover w-full h-full block" />
                       </div>
-                      <h3 className="font-semibold text-lg text-[#254168]">{producto.name}</h3>
-                      <p className="text-sm text-[#254168]/70 mb-2">{producto.category}</p>
-                      <button
-                        className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
-                        onClick={() => handleQuoteClick(producto.name)}
-                      >
-                        Cotizar
-                      </button>
+                      <div className="p-4 flex gap-1  flex-col">
+                        <div>
+                          <h3 className="font-semibold text-[#254168]">{producto.nombre}</h3>
+                        </div>
+                        <div>
+                          <p className="text-[12px] text-[#254168]/40">{producto.category}</p>
+                        </div>
+                        <div>
+                          <p className="pt-1 text-[14px] text-[#254168]">{producto.descripcion}</p>
+                        </div>
+                        <div >
+                          <button
+                            className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
+                            onClick={() => handleQuoteClick(producto.name)}
+                          >
+                            Cotizar
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>

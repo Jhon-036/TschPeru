@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
@@ -25,32 +24,28 @@ const ShopMain = () => {
 
   const featuredParts = [
     {
-      name: "Filtro de Aceite Premium",
+      nombre: "ELECTROVÁLVULA",
       category: "Filtros",
-      quality: "Premium",
-      popularity: "Más Vendido",
-      image: "/electrovalvula-parker.png",
+      descripcion: 'Control hidráulico',
+      image: "/electrovalvula.png",
     },
     {
-      name: "Batería de Alto Rendimiento",
+      nombre: "SELECTOR DE MARCHA",
       category: "Eléctrico",
-      quality: "Premium",
-      popularity: "Recomendado",
+      descripcion: 'Valeo - Equipos KALMAR',
       image: "/selector-de-marcha.png",
     },
     {
-      name: "Juego de Frenos Cerámicos",
+      nombre: "SENSOR INDUCTIVO",
       category: "Frenos",
-      quality: "Reforzado",
-      popularity: "Más Vendido",
+      descripcion: '⌀ M30, Autonic',
       image: "/sensor-inductivo-m18.png",
     },
     {
-      name: "Kit de Embrague Completo",
+      nombre: "KIT DEUTSCH 3 PINES",
       category: "Transmisión",
-      quality: "Genuino",
-      popularity: "Más Vendido",
-      image: "/sensor-inductivo-m30.png",
+      descripcion: 'Conector hembra y macho + pines 16 a 22AWG / SERIE DT',
+      image: "/kit-deutsch-3-pines.png",
     },
   ];
 
@@ -69,13 +64,13 @@ const ShopMain = () => {
         </div>
 
         {/* Categorías Populares */}
-        <div className="mt-12" data-aos="fade-up">
+        <div className="mt-16" data-aos="fade-up">
           <div className="flex justify-between items-center mb-4 gap-5">
-            <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
+            <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,1.6rem)]">
               Categorías Populares
             </h3>
             <Link to={'/productos'}>
-              <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
+              <p className="text-sm md:text-lg flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
                 Ver Todas <FaArrowRight />
               </p>
             </Link>
@@ -102,63 +97,113 @@ const ShopMain = () => {
         {/* Productos Destacados */}
         <div className="mt-12" data-aos="fade-up">
           <div className="flex justify-between items-center mb-4 gap-5">
-            <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,2rem)]">
+            <h3 className="text-[#254168] font-semibold text-[clamp(1.2rem,4vw,1.6rem)]">
               Productos Destacados
             </h3>
             <Link to={'/productos'}>
-              <p className="text-sm md:text-xl flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
+              <p className="text-sm md:text-lg flex items-center gap-1 text-[#f9cb21] cursor-pointer hover:underline">
                 Ver Todas <FaArrowRight />
               </p>
             </Link>
           </div>
-          <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
+          <div className="flex  justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
             {featuredParts.map((part, index) => (
-              <div
-                key={index}
-                className="flex-none bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
-                data-aos="zoom-in"
-                data-aos-delay={`${index * 150}`}
-              >
-                <div className="w-52 sm:w-72 h-56 sm:h-72 flex justify-center items-center">
-                  <img src={part.image} className="object-contain p-6 h-full" alt={part.name} />
+              <div key={index} className="flex-shrink-0 w-[288px] rounded shadow-md">
+                <div className="w-full aspect-square relative">
+                  <img src={part.image} alt={part.name} className="object-cover w-full h-full block" />
                 </div>
-                <div className="bg-white p-4 text-[#254168] grid gap-3">
-                  <div className="flex flex-col items-start gap-2">
-                    <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] rounded-xl">
-                      {part.category}
-                    </span>
-                    <p className="font-bold text-[clamp(1rem,3vw,1.1rem)]">
-                      {part.name}
-                    </p>
+                <div className="p-4 flex gap-1 flex-col">
+                  <div>
+                    <h3 className="font-semibold text-[#254168]">{part.nombre}</h3>
                   </div>
-                  <div className="flex gap-3">
-                    <span className="text-xs sm:text-sm px-3 border border-[#254168] bg-[#254168] text-white rounded-xl">{part.quality}</span>
-                    <span className="text-xs sm:text-sm px-3 border border-[#f9cb21] text-[#254168] bg-[#f9cb21] rounded-xl">{part.popularity}</span>
+                  <div>
+                    <p className="text-[12px] text-[#254168]/40">{part.category}</p>
                   </div>
-                  <div className="flex justify-end items-center pt-4">
-                    <button className="flex items-center gap-2 bg-[#f9cb21] py-1 px-3 rounded-sm text-sm cursor-pointer">
-                      <MdOutlineShoppingCart className="text-[#254168]" /> Cotizar
+                  <div>
+                    <p className="pt-1 text-[14px] text-[#254168]">{part.descripcion}</p>
+                  </div>
+                  <div>
+                    <button
+                      className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
+                      onClick={() => handleQuoteClick(part.name)}
+                    >
+                      Cotizar
                     </button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
 
       </div>
 
-      {/* Video sección */}
-      <div className="mt-12 relative" data-aos="fade-up">
-        <img src="/promociones -exclusivas-home.jpg" className="w-full h-[20rem] object-cover sm:h-[30rem]" />
-        <div className="absolute inset-0 flex flex-col justify-center text-center bg-black/30 text-white p-4 gap-4">
-          <h3 className="text-[clamp(1.2rem,5vw,3.5rem)] font-semibold">Promociones Exclusivas</h3>
-          <p className="font-light leading-5 sm:leading-10 text-[clamp(0.9rem,2vw,1.5rem)] max-w-3xl mx-auto">
-            Aprovecha nuestras rebajas en productos seleccionados.
-          </p>
-          <button onClick={() => navigate("/productos")} className="uppercase p-2 mt-2 bg-[#f9cb21] w-28 text-white font-semibold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300 mx-auto">Ver más</button>
+      {/* Marcas */}
+      <section className=" w-full bg-white py-2">
+        <div className="w-[85%] max-w-7xl mx-auto py-10 m-auto">
+          <h2 className="text-center text-3xl text-[#254168] font-semibold">Nuestras Marcas</h2>
+          <p className="text-center mt-2.5 text-[18px]">Trabajamos con las mejores marcas del mercado para garantizar la calidad y confiabilidad de todos nuestros productos y servicios.</p>
         </div>
-      </div>
+        <div className="flex flex-col gap-8 items-center py-16 overflow-x-auto">
+          <div className="flex gap-8">
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/atos.png" className="w-full" alt="tsch-atos" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/cat.png" className="w-full" alt="tsch-cat" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/danfoss.png" className="w-full" alt="tsch-danfoss" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/hyundai.png" className="w-full" alt="tsch-hyundai" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/hyster.png" className="w-full" alt="tsch-hyster" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/kalmar.png" className="w-full" alt="tsch-kalmar" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/komatsu.png" className="w-full" alt="tsch-komatsu" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/konecranes.png" className="w-full" alt="tsch-konecranes" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/liebherr.png" className="w-full" alt="tsch-liebherr" />
+            </div>
+          </div>
+          <div className="flex gap-8">
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/pyf.png" className="w-full" alt="tsch-p&f" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/rexroth.png" className="w-full" alt="tsch-rexroth&f" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/sennebogen.png" className="w-full" alt="tsch-sennebogen" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/spicer.png" className="w-full" alt="tsch-spicer" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/sun-hidraulics.png" className="w-full" alt="tsch-sun-hidraulics" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/terex.png" className="w-full" alt="tsch-terex" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/toyota.png" className="w-full" alt="tsch-toyota" />
+            </div>
+            <div className="w-[10rem] bg-[#eee] flex flex-col justify-center items-center object-contain p-5">
+              <img src="/public/volvo.png" className="w-full" alt="tsch-volvo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
