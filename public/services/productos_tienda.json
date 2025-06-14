@@ -3,181 +3,181 @@
     "nombre": "FUSIBLE 50A",
     "descripcion": "Fusible tipo cartucho 50amp",
     "category": "Componentes eléctricos",
-    "image": "/public/fusible-50a.png"
+    "image": "/fusible-50a.png"
   },
   {
     "nombre": "FUSIBLE 100A",
     "descripcion": "Fusible tipo cartucho 100amp",
     "category": "Componentes eléctricos",
-    "image": "/public/fusible-100a.png"
+    "image": "/fusible-100a.png"
   },
   {
     "nombre": "PULSADOR REDONDO",
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Componentes eléctricos",
-    "image": "/public/pulsador-redondo.png"
+    "image": "/pulsador-redondo.png"
   },
   {
     "nombre": "SWITCH MASTER",
     "descripcion": "24v - 300A",
     "category": "Componentes eléctricos",
-    "image": "/public/switch-master.png"
+    "image": "/switch-master.png"
   },
   {
     "nombre": "RELÉ AUTOMOTRIZ",
     "descripcion": "24Volts - 130Amp",
     "category": "Componentes eléctricos",
-    "image": "/public/rele-automotriz.png"
+    "image": "/rele-automotriz.png"
   },
   {
     "nombre": "ALARMA DE RETROCESO",
     "descripcion": "SERIE 500 107DB 12-24V",
     "category": "Componentes eléctricos",
-    "image": "/public/alarma-de-retroceso.png"
+    "image": "/alarma-de-retroceso.png"
   },
   {
     "nombre": "ALARMA DE RETROCESO",
     "descripcion": "SERIE 800 120Db 12 - 36V",
     "category": "Componentes eléctricos",
-    "image": "/public/alarma-de-retroceso1.png"
+    "image": "/alarma-de-retroceso1.png"
   },
   {
     "nombre": "PULSADOR CUADRADO",
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Componentes eléctricos",
-    "image": "/public/pulsador-cuadrado.png"
+    "image": "/pulsador-cuadrado.png"
   },
   {
     "nombre": "VÁLVULA DE CONTROL",
     "descripcion": "Bombas hidráulica REXROTH",
     "category": "Componentes hidraulicos",
-    "image": "/public/valvula-de-control.png"
+    "image": "/valvula-de-control.png"
   },
   {
     "nombre": "BOBINA ELECTROMACNETICA",
     "descripcion": "24 VDC - 22 watts",
     "category": "Componentes hidraulicos",
-    "image": "/public/bobina-electromacnetica.png"
+    "image": "/bobina-electromacnetica.png"
   },
   {
     "nombre": "ELECTROVÁLVULA",
     "descripcion": "Control hidráulico",
     "category": "Componentes hidraulicos",
-    "image": "/public/electrovalvula.png"
+    "image": "/electrovalvula.png"
   },
   {
     "nombre": "ACUMULADOR DE PRESIÓN",
     "descripcion": "Acumulador hidráulico - 35,9MPA - 2.8L",
     "category": "Componentes hidraulicos",
-    "image": "/public/acumulador-de-presion.png"
+    "image": "/acumulador-de-presion.png"
   },
   {
     "nombre": "ELECTROVÁLVULA",
     "descripcion": "Control hidráulico - 24V",
     "category": "Componentes hidraulicos",
-    "image": "/public/electrovalvula1.png"
+    "image": "/electrovalvula1.png"
   },
   {
     "nombre": "ELECTROVÁLVULA",
     "descripcion": "Control hidráulico - 24V",
     "category": "Componentes hidraulicos",
-    "image": "/public/electrovalvula2.png"
+    "image": "/electrovalvula2.png"
   },
   {
     "nombre": "VÁLVULA DE CONTROL",
     "descripcion": "Bombas hidráulica DANFOSS",
     "category": "Componentes hidraulicos",
-    "image": "/public/valvula-de-control1.png"
+    "image": "/valvula-de-control1.png"
   },
   {
     "nombre": "SWITCH DE PRESIÓN",
     "descripcion": "Contactos NC y NA - 0 a 250bar",
     "category": "Componentes hidraulicos",
-    "image": "/public/switch-de-presion.png"
+    "image": "/switch-de-presion.png"
   },
   {
     "nombre": "KIT BULLDOG 2 VIAS",
     "descripcion": " Conector hembra y macho + pines 16 a 22AWG",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-bulldog-2-vias.png"
+    "image": "/kit-bulldog-2-vias.png"
   },
   {
     "nombre": "KIT DEUTSCH 2 PINES",
     "descripcion": "Conector hembra y macho + pines 16 a 22AWG / SERIE DT",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-deutsch-2-pines.png"
+    "image": "/kit-deutsch-2-pines.png"
   },
   {
     "nombre": "KIT DEUTSCH 3 PINES",
     "descripcion": "Conector hembra y macho + pines 16 a 22AWG / SERIE DT",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-deutsch-3-pines.png"
+    "image": "/kit-deutsch-3-pines.png"
   },
   {
     "nombre": "KIT CONECTOR DELPHI",
     "descripcion": " Conector hembra y macho + pines",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-conector-delphi.png"
+    "image": "/kit-conector-delphi.png"
   },
   {
     "nombre": "JUEGO DE PINES - DEUTSCH",
     "descripcion": "Pines tubulares 16 - AWG",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/juego-de-pines-deutsch.png"
+    "image": "/juego-de-pines-deutsch.png"
   },
   {
     "nombre": "KIT DE CONECTOR IMPERMEABLE 2 VIAS",
     "descripcion": "Conector hembra y macho + pines",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-de-conector-impermeable-2-vias.png"
+    "image": "/kit-de-conector-impermeable-2-vias.png"
   },
   {
     "nombre": "KIT DE CONECTOR IMPERMEABLE 3 VIAS",
     "descripcion": "Conector hembra y macho + pines",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-de-conector-impermeable-3-vias.png"
+    "image": "/kit-de-conector-impermeable-3-vias.png"
   },
   {
     "nombre": "KIT DE CONECTOR DETROIT",
     "descripcion": "Conector modelo detroit 30 pines",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-de-conector-detroit.png"
+    "image": "/kit-de-conector-detroit.png"
   },
   {
     "nombre": "KIT DE CONECTOR DANFUSS",
     "descripcion": "Conector de 42 pines - APC 200",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-de-conector-danfuss.png"
+    "image": "/kit-de-conector-danfuss.png"
   },
   {
     "nombre": "KIT DEUTSCH 8 PINES",
     "descripcion": "Conector hembra y macho + pines 16 a 22AWG / SERIE DT",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-deutsch-8-pines.png"
+    "image": "/kit-deutsch-8-pines.png"
   },
   {
     "nombre": "KIT DEUTSCH 4 PINES",
     "descripcion": "Conector hembra y macho + pines 16 a 22AWG / SERIE DT",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-deutsch-4-pines.png"
+    "image": "/kit-deutsch-4-pines.png"
   },
   {
     "nombre": "KIT DEUTSCH 6 PINES",
     "descripcion": "Conector hembra y macho + pines 16 a 22AWG / SERIE DT",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-deutsch-6-pines.png"
+    "image": "/kit-deutsch-6-pines.png"
   },
   {
     "nombre": "KIT DEUTSCH 8 PINES",
     "descripcion": "Conector hembra y macho + pines 16 a 22AWG / SERIE DT",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-deutsch-8-pines1.png"
+    "image": "/kit-deutsch-8-pines1.png"
   },
   {
     "nombre": "KIT DE CONECTOR IMPERMEABLE 2 VIAS",
     "descripcion": "Conector hembra y macho + pines",
     "category": "Conectores automotrices e industriales",
-    "image": "/public/kit-de-conector-impermeable-2-vias1.png"
+    "image": "/kit-de-conector-impermeable-2-vias1.png"
   },
   {
     "nombre": "POXIMAMENTE",
@@ -191,174 +191,174 @@
     "nombre": "TURBO COMPRESOR",
     "descripcion": "Turbo compresor HOLSET para motores Cummins",
     "category": "Motores",
-    "image": "/public/turbo-compresor.png"
+    "image": "/turbo-compresor.png"
   },
   {
     "nombre": "ARRANCADOR",
     "descripcion": "Motores CUMMINS",
     "category": "Motores",
-    "image": "/public/arrancador.png"
+    "image": "/arrancador.png"
   },
   {
     "nombre": "BOMBA DE AGUA",
     "descripcion": "Producto OEM - Motores Cummins",
     "category": "Motores",
-    "image": "/public/bomba-de-agua.png"
+    "image": "/bomba-de-agua.png"
   },
   {
     "nombre": "ALTERNADOR",
     "descripcion": "Alternador 24V - Motores Cummins",
     "category": "Motores",
-    "image": "/public/alternador.png"
+    "image": "/alternador.png"
   },
   {
     "nombre": "KIT DE CÁMARAS 360°",
     "descripcion": "“Bird View” 3D y sistema anticolisión con IA",
     "category": "Otros componentes",
-    "image": "/public/kit-de-camaras-360.png"
+    "image": "/kit-de-camaras-360.png"
   },
   {
     "nombre": "KIT DE CÁMARA TRASERA",
     "descripcion": "Cámara “170° con sistema anticolisión con IA",
     "category": "Otros componentes",
-    "image": "/public/kit-de-camara-trasera.png"
+    "image": "/kit-de-camara-trasera.png"
   },
   {
     "nombre": "KIT DE CÁMARA Y SENSOR ANTICOSIÓN",
     "descripcion": "Sistema anticolisión con radar y cámara de retroceso",
     "category": "Otros componentes",
-    "image": "/public/kit-de-camara-y-sensor-anticosion.png"
+    "image": "/kit-de-camara-y-sensor-anticosion.png"
   },
   {
     "nombre": "ARANDELA CONICA",
     "descripcion": "Arandela para puente Kessler",
     "category": "Portacontenedores",
-    "image": "/public/arandela-conica.png"
+    "image": "/arandela-conica.png"
   },
   {
     "nombre": "PULSADOR REDONDO",
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/pulsador-redondo.png"
+    "image": "/pulsador-redondo.png"
   },
   {
     "nombre": "ESPARRAGOS DELANTEROS DE RUEDA",
     "descripcion": "Espárrago para puente Kessler",
     "category": "Portacontenedores",
-    "image": "/public/esparragos-delanteros-de-rueda.png"
+    "image": "/esparragos-delanteros-de-rueda.png"
   },
   {
     "nombre": "TUERCA PARA ESPARRAGOS DELANTERO",
     "descripcion": "Tuercas para puente Kessler",
     "category": "Portacontenedores",
-    "image": "/public/tuerca-para-esparragos-delantero.png"
+    "image": "/tuerca-para-esparragos-delantero.png"
   },
   {
     "nombre": "APC 200",
     "descripcion": "Transmisiones DANA",
     "category": "Portacontenedores",
-    "image": "/public/apc-200.png"
+    "image": "/apc-200.png"
   },
   {
     "nombre": "POTENCIOMETRO",
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/pontenciometro.png"
+    "image": "/pontenciometro.png"
   },
   {
     "nombre": "KIT DE SENSOR DE LONGITUD",
     "descripcion": "Cable acerado + winch pack",
     "category": "Portacontenedores",
-    "image": "/public/kit-de-sensor-de-longitud.png"
+    "image": "/kit-de-sensor-de-longitud.png"
   },
   {
     "nombre": "SELECTOR DE MARCHA",
     "descripcion": "Valeo - Equipos KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/selector-de-marcha.png"
+    "image": "/selector-de-marcha.png"
   },
   {
     "nombre": "MÓDULO DE CONTROL",
     "descripcion": "Módulo DANFOSS - Equipos KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/modeulo-de-control.png"
+    "image": "/modeulo-de-control.png"
   },
   {
     "nombre": "JOYSTICK TIPO COBRA",
     "descripcion": "Compatible para equipos KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/joystick-tipo-cobra.png"
+    "image": "/joystick-tipo-cobra.png"
   },
   {
     "nombre": "CADENA PLÁSTICA",
     "descripcion": " Producto de la marca IGUS",
     "category": "Portacontenedores",
-    "image": "/public/cadena-plastica.png"
+    "image": "/cadena-plastica.png"
   },
   {
     "nombre": "POTENCIOMETRO",
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/potenciometro.png"
+    "image": "/potenciometro.png"
   },
   {
     "nombre": "PULSADOR CUADRADO",
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Portacontenedores",
-    "image": "/public/pulsador-cuadrado.png"
+    "image": "/pulsador-cuadrado.png"
   },
   {
     "nombre": "SENSOR INDUCTIVO",
     "descripcion": "⌀ M18, Autonic",
     "category": "Sensores industriales",
-    "image": "/public/sensor-inductivo.png"
+    "image": "/sensor-inductivo.png"
   },
   {
     "nombre": "SENSOR INDUCTIVO",
     "descripcion": "⌀ M30, Autonic",
     "category": "Sensores industriales",
-    "image": "/public/sensor-inductivo1.png"
+    "image": "/sensor-inductivo1.png"
   },
   {
     "nombre": "SENSOR INDUCTIVO",
     "descripcion": " ⌀ M18, IFM electronic",
     "category": "Sensores industriales",
-    "image": "/public/sensor-inductivo2.png"
+    "image": "/sensor-inductivo2.png"
   },
   {
     "nombre": "TRASMISOR DE PRESIÓN",
     "descripcion": "Sistemas hidráulicos 0-250 bar",
     "category": "Sensores industriales",
-    "image": "/public/transmisor-de-presion.png"
+    "image": "/transmisor-de-presion.png"
   },
   {
     "nombre": "SENSOR INDUCTIVO",
     "descripcion": "⌀ M30, Conector M08 - P&F",
     "category": "Sensores industriales",
-    "image": "/public/sensor-inductivo3.png"
+    "image": "/sensor-inductivo3.png"
   },
   {
     "nombre": "ELECTROVÁLVULA",
     "descripcion": "Transmisiones DANA",
     "category": "Transmisiones",
-    "image": "/public/electrovalvula3.png"
+    "image": "/electrovalvula3.png"
   },
   {
     "nombre": "ELECTROVÁLVULA",
     "descripcion": "Transmisiones DANA",
     "category": "Transmisiones",
-    "image": "/public/electrovalvula4.png"
+    "image": "/electrovalvula4.png"
   },
   {
     "nombre": "ELECTROVÁLVULA",
     "descripcion": "Transmisiones DANA",
     "category": "Transmisiones",
-    "image": "/public/electrovalvula5.png"
+    "image": "/electrovalvula5.png"
   },
   {
     "nombre": "PRESOSTATO",
     "descripcion": "Transmisiones DANA",
     "category": "Transmisiones",
-    "image": "/public/presostato.png"
+    "image": "/presostato.png"
   }
 ]
