@@ -105,7 +105,7 @@ export default function Shoping() {
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                   {productosVisibles.map((producto) => (
                     <div key={producto.id} className="rounded shadow-md transition-transform duration-300 hover:scale-105">
                       <div className="w-full aspect-square relative ro">
