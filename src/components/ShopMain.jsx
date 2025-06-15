@@ -4,8 +4,36 @@ import { FaArrowRight } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import ModalCotizacion from "./ModalCotizacion";
 
 const ShopMain = () => {
+
+  const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", ruc: "", message: "" });
+
+  const handleQuoteClick = (productName) => {
+    setSelectedProduct(productName);
+    setQuoteDialogOpen(true);
+    setShowEmailForm(false);
+  };
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    alert("Formulario enviado con éxito");
+    setQuoteDialogOpen(false);
+    setShowEmailForm(false);
+    setFormData({ name: "", email: "", phone: "", ruc: "", message: "" });
+  };
+  const handleWhatsAppClick = () => {
+    if (!selectedProduct) return;
+    const telefono = "51951758040";
+    const mensaje = `Hola TSCH, revisé su sitio web y estoy interesado en '${selectedProduct}'`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  };
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,7 +44,7 @@ const ShopMain = () => {
   }, []);
 
   const featuredCategories = [
-    { name: "Montacargas", image: "/maquinaria-inicio.png" },
+    { name: "Componentes hidraulicos", image: "/com-hidraulico-inicio.png" },
     { name: "Portacontenedores", image: "/portacontenedores-inicio.png" },
     { name: "Transmisiones", image: "/transmision-inicio.png" },
     { name: "Motores", image: "/motor-inicio.png" },
@@ -25,20 +53,20 @@ const ShopMain = () => {
   const featuredParts = [
     {
       nombre: "ELECTROVÁLVULA",
-      category: "Filtros",
+      category: "Componentes hidraulicos",
       descripcion: 'Control hidráulico',
       image: "/electrovalvula.png",
     },
     {
       nombre: "SELECTOR DE MARCHA",
-      category: "Eléctrico",
+      category: "Portacontenedores",
       descripcion: 'Valeo - Equipos KALMAR',
       image: "/selector-de-marcha.png",
     },
     {
       nombre: "SENSOR INDUCTIVO",
-      category: "Frenos",
-      descripcion: '⌀ M30, Autonic',
+      category: "Sensores industriales",
+      descripcion: '⌀ M18, IFM electronic',
       image: "/sensor-inductivo-m18.png",
     },
     {
@@ -78,18 +106,23 @@ const ShopMain = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8 lg:mt-10">
             {featuredCategories.map((category, index) => (
-              <div
+              <Link
                 key={index}
-                className="relative w-full aspect-square bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105 cursor-pointer shadow-md"
-                style={{ backgroundImage: `url(${category.image})` }}
+                to={`/productos?categoria=${encodeURIComponent(category.name)}`}
                 data-aos="fade-up"
                 data-aos-delay={`${index * 150}`}
               >
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#f9cb21] text-white text-center">
-                  <h2 className="font-semibold text-[clamp(1rem,2vw,1.2rem)]">{category.name}</h2>
+                <div
+                  className="relative w-full aspect-square bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105 cursor-pointer shadow-md"
+                  style={{ backgroundImage: `url(${category.image})` }}
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#f9cb21] text-white text-center">
+                    <h2 className="font-semibold text-[clamp(1rem,2vw,1.2rem)]">{category.name}</h2>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
+
           </div>
         </div>
 
@@ -125,7 +158,7 @@ const ShopMain = () => {
                   <div>
                     <button
                       className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
-                      onClick={() => handleQuoteClick(part.name)}
+                      onClick={() => handleQuoteClick(part.nombre)}
                     >
                       Cotizar
                     </button>
@@ -207,7 +240,17 @@ const ShopMain = () => {
           </div>
         </div>
       </section>
-
+      <ModalCotizacion
+        open={quoteDialogOpen}
+        onClose={() => setQuoteDialogOpen(false)}
+        producto={selectedProduct}
+        showEmailForm={showEmailForm}
+        setShowEmailForm={setShowEmailForm}
+        formData={formData}
+        setFormData={setFormData}
+        handleFormSubmit={handleFormSubmit}
+        handleWhatsAppClick={handleWhatsAppClick}
+      />
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import BarraAmarillo from "./BarraAmarillo"
+
 const ServiceTec = () => {
   return (
     <div className="mt-16">
@@ -6,19 +8,16 @@ const ServiceTec = () => {
                 <h2 className="text-white font-bold text-[clamp(1.8rem,5vw,3rem)]">Innovación y tegnología</h2>
             </div>
         </div>
-        <article className="w-[85%] max-w-7xl mx-auto py-24 mt-8 m-auto flex flex-col gap-8">
-            <h1 className="text-3xl text-[#254168] font-bold">Innovación y tegnología</h1>
-            <p className="text-xl font-light text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam asperiores voluptatem eveniet tempora molestiae corrupti sed placeat eligendi omnis ea fugit, at quaerat alias. Non debitis optio minima odio dignissimos?
-            Iure quae nobis repudiandae ratione culpa sint alias incidunt earum. Deserunt a illo illum quidem molestiae debitis facere iste vitae atque! Accusantium, illo provident deleniti sequi ducimus illum. Autem, placeat!
-            Similique, blanditiis libero voluptatibus accusantium eos corrupti minus numquam nulla accusamus. Ex velit consequatur esse, fugit cumque quia voluptate numquam veniam obcaecati! Possimus accusantium odio, dignissimos fuga porro quas totam.
-            Ad soluta ex quos beatae ullam. Quia dolores dignissimos fugiat hic error ipsa harum vitae officia perspiciatis nostrum repellendus explicabo odit expedita id exercitationem dolorem, nihil, veritatis magni. Consectetur, fugit!
-            Iure ratione quaerat veniam, culpa delectus tempora cum explicabo libero tenetur quos quas magnam a voluptatum iste commodi recusandae doloribus, nulla repellendus dolor iusto ex. Est nisi sequi fugit eaque.
-            Nostrum, blanditiis reprehenderit repellat quia sunt, culpa corporis soluta quam similique deleniti illum incidunt, adipisci explicabo esse error iure optio delectus. Ullam esse, voluptatibus quasi quos et labore praesentium quisquam?
-            Vero vel officiis tempore placeat quos perferendis blanditiis, voluptatum, quo quisquam animi doloremque porro, assumenda rem. Et asperiores, modi placeat quas veniam, accusantium odit nihil architecto illum dolorem eum assumenda.
-            Ea dolores nam totam. Quo doloribus minima non, veniam laborum quod error nostrum commodi! Cumque possimus quas sed enim minus suscipit accusantium illum ea praesentium, soluta doloribus, aspernatur modi delectus.
-            Amet nemo officiis soluta quos. Sed velit deleniti, ducimus alias vitae molestias vel quis, debitis exercitationem necessitatibus facere mollitia. Nisi, unde saepe itaque dolore tempore nesciunt obcaecati. Voluptatum, quo rem.
-            Nisi temporibus pariatur dolore, sed eligendi ea asperiores neque porro magnam voluptas quo repellendus atque esse autem facere earum. Nisi animi cumque repudiandae in fugit vero dicta hic assumenda et.</p>
-        </article>
+        <article className="w-[85%] h-[50rem] max-w-7xl mx-auto py-24 mt-8 m-auto flex flex-col gap-8 justify-center">
+            <h1 className="text-3xl text-[#254168] font-bold mb-10 flex gap-3"><BarraAmarillo/>Innovación y tegnología</h1>
+            <p className="text-xl font-light text-gray-700">En T.S.C.H. EIRL, transformamos su maquinaria con soluciones tecnológicas avanzadas que mejoran la seguridad, eficiencia y productividad de sus operaciones. Integramos sistemas inteligentes y automatizados para modernizar equipos en los sectores minero, industrial y portuario, garantizando un rendimiento óptimo y reduciendo riesgos operativos.</p>
+            <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
+              <li className="list-disc">Cámaras 360° y sensores anticolisión con inteligencia artificial para operaciones más segura</li>
+              <li className="list-disc">Sistemas de pre-arranque automatizados</li>
+              <li className="list-disc">Sistemas de bloqueo de funciones críticas</li>
+              <li className="list-disc">Sistemas de alarma y mejora continua</li>
+            </ul>
+        </article>  
     </div>
   )
 }

@@ -1,3 +1,5 @@
+import BarraAmarillo from "./BarraAmarillo"
+
 const ServiceOEM = () => {
   return (
     <div className="mt-16">
@@ -7,17 +9,37 @@ const ServiceOEM = () => {
             </div>
         </div>
         <article className="w-[85%] max-w-7xl mx-auto py-24 mt-8 m-auto flex flex-col gap-8">
-            <h1 className="text-3xl text-[#254168] font-bold">Venta de Repuestos OEM</h1>
-            <p className="text-xl font-light text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam asperiores voluptatem eveniet tempora molestiae corrupti sed placeat eligendi omnis ea fugit, at quaerat alias. Non debitis optio minima odio dignissimos?
-            Iure quae nobis repudiandae ratione culpa sint alias incidunt earum. Deserunt a illo illum quidem molestiae debitis facere iste vitae atque! Accusantium, illo provident deleniti sequi ducimus illum. Autem, placeat!
-            Similique, blanditiis libero voluptatibus accusantium eos corrupti minus numquam nulla accusamus. Ex velit consequatur esse, fugit cumque quia voluptate numquam veniam obcaecati! Possimus accusantium odio, dignissimos fuga porro quas totam.
-            Ad soluta ex quos beatae ullam. Quia dolores dignissimos fugiat hic error ipsa harum vitae officia perspiciatis nostrum repellendus explicabo odit expedita id exercitationem dolorem, nihil, veritatis magni. Consectetur, fugit!
-            Iure ratione quaerat veniam, culpa delectus tempora cum explicabo libero tenetur quos quas magnam a voluptatum iste commodi recusandae doloribus, nulla repellendus dolor iusto ex. Est nisi sequi fugit eaque.
-            Nostrum, blanditiis reprehenderit repellat quia sunt, culpa corporis soluta quam similique deleniti illum incidunt, adipisci explicabo esse error iure optio delectus. Ullam esse, voluptatibus quasi quos et labore praesentium quisquam?
-            Vero vel officiis tempore placeat quos perferendis blanditiis, voluptatum, quo quisquam animi doloremque porro, assumenda rem. Et asperiores, modi placeat quas veniam, accusantium odit nihil architecto illum dolorem eum assumenda.
-            Ea dolores nam totam. Quo doloribus minima non, veniam laborum quod error nostrum commodi! Cumque possimus quas sed enim minus suscipit accusantium illum ea praesentium, soluta doloribus, aspernatur modi delectus.
-            Amet nemo officiis soluta quos. Sed velit deleniti, ducimus alias vitae molestias vel quis, debitis exercitationem necessitatibus facere mollitia. Nisi, unde saepe itaque dolore tempore nesciunt obcaecati. Voluptatum, quo rem.
-            Nisi temporibus pariatur dolore, sed eligendi ea asperiores neque porro magnam voluptas quo repellendus atque esse autem facere earum. Nisi animi cumque repudiandae in fugit vero dicta hic assumenda et.</p>
+            <h1 className="text-3xl text-[#254168] font-bold mb-10 flex gap-3"><BarraAmarillo/>Venta de Repuestos OEM</h1>
+            <div className="text-xl font-light text-gray-700">
+              <p className="font-semibold">En T.S.C.H. EIRL entendemos lo crítico que es mantener tu maquinaria en movimiento.</p>
+              <p className="pt-2">Por eso nos especializamos en proveer repuestos OEM y alternativos de alta calidad para equipos industriales, mineros y portuarios, asegurando que tus operaciones nunca se detengan.</p>
+              <ul className="text-lg md:text-xl font-light text-gray-700 pl-12 pt-2">
+                <li className="list-disc">Trabajamos con proveedores certificados que cumplen altos estándares</li>
+                <li className="list-disc">Ofrecemos alternativas de calidad comprobada cuando el repuesto original no está disponible</li>
+              </ul>
+            </div>
+            <h2 className="text-xl text-[#254168] font-bold">Brindamos :</h2>
+            <div className="text-xl font-light text-gray-700 pl-6">
+              <p className="font-semibold">Expertise Técnico:</p>
+              <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
+                <li className="list-disc">Asesoría personalizada para identificar exactamente lo que tu equipo necesita</li>
+                <li className="list-disc">Conocimiento especializado en marcas como CAT, Kalmar,Hyster, Cummins, Dana y más</li>
+              </ul>
+              <p className="font-semibold pt-6">Compromiso con Tu Operación:</p>
+              <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
+                <li className="list-disc">Entrega rápida para minimizar tiempos de parada</li>
+                <li className="list-disc">Precios competitivos sin sacrificar calidad</li>
+              </ul>
+              <p className="font-semibold pt-6">Repuestos dirigidoa para sectores como:</p>
+              <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
+                <li className="list-disc font-semibold pt-6">Minería</li>
+                <p className="pl-6">Excavadoras, perforadoras, volquetes</p>
+                <li className="list-disc font-semibold pt-6">Puertos</li>
+                <p className="pl-6">Grúas, reach stackers, manipuladores de contenedores</p>
+                <li className="list-disc font-semibold pt-6">Construcción</li>
+                <p className="pl-6">Motoniveladoras, gruas telescópica , cargador frontal, bulldozers</p>
+              </ul>
+            </div>
         </article>
     </div>
   )

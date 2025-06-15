@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
-import { FaCheck, FaArrowLeft, FaEnvelope, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
+import { FaCheck, FaArrowLeft, FaEnvelope, FaWhatsapp, FaPaperPlane, FaTimes } from "react-icons/fa";
+import { useSearchParams } from "react-router-dom";
 
 export default function Shoping() {
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
+  // const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams()
+  const initialCategoria = searchParams.get('categoria') || null
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(initialCategoria)
   const [productos, setProductos] = useState([]);
 
   const [paginaActual, setPaginaActual] = useState(1);
@@ -19,6 +23,10 @@ export default function Shoping() {
         const res = await fetch("/services/productos_tienda.json");
         const data = await res.json();
         setProductos(data);
+
+        const categoriaURL = searchParams.get("categoria");
+        setCategoriaSeleccionada(categoriaURL || null);
+
       } catch (error) {
         console.log("Error al cargar la DB: ", error);
       }
@@ -60,6 +68,15 @@ export default function Shoping() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleWhatsAppClick = () => {
+    console.log("Producto seleccionado:", selectedProduct);
+    if (!selectedProduct) return;
+    const telefono = "51951758040"
+    const mensaje = `Hola TSCH, revisé su sitio web y estoy interesado en '${selectedProduct}'`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="mt-16">
       <div className="relative bg-[url(/about-company.jpg)] h-[18rem] sm:h-[30rem] bg-center bg-no-repeat bg-cover">
@@ -70,7 +87,7 @@ export default function Shoping() {
       <div className="container mx-auto px-4 py-8">
 
         <div className="flex flex-col md:flex-row gap-6 my-11">
-          
+
           {/* Categorías  */}
           <div className="block shrink-0">
             <div className="sticky top-44">
@@ -87,7 +104,10 @@ export default function Shoping() {
                   <button
                     key={categoria}
                     className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${categoriaSeleccionada === categoria ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
-                    onClick={() => setCategoriaSeleccionada(categoria)}
+                    onClick={() => {
+                      setCategoriaSeleccionada(categoria)
+                      setSearchParams({ categoria })
+                    }}
                   >
                     {categoria}
                     {categoriaSeleccionada === categoria && <FaCheck className="ml-2 inline" />}
@@ -124,7 +144,7 @@ export default function Shoping() {
                         <div >
                           <button
                             className="w-full mt-2 bg-[#f9cb21] hover:bg-[#e0b71e] text-[#254168] font-bold p-2 rounded cursor-pointer"
-                            onClick={() => handleQuoteClick(producto.name)}
+                            onClick={() => handleQuoteClick(producto.nombre)}
                           >
                             Cotizar
                           </button>
@@ -150,91 +170,99 @@ export default function Shoping() {
             )}
           </div>
           {/* Modal con animación */}
-        {quoteDialogOpen && (
-          <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-            <div className="w-[85%]">
-              <div className="bg-white rounded-lg p-6 max-w-md w-full relative animate-accordion-down m-auto">
-                {!showEmailForm ? (
-                  <>
-                    <h2 className="text-xl font-bold text-[#254168] mb-4">Solicitar Cotización</h2>
-                    <p className="mb-6">{selectedProduct && `Desea cotizar "${selectedProduct}" por:`}</p>
-                    <div className="flex gap-4">
-                      <button
-                        className="flex-1 cursor-pointer bg-[#254168] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
-                        onClick={() => setShowEmailForm(true)}
-                      >
-                        <FaEnvelope className="mr-2" /> Correo
-                      </button>
-                      <button
-                        className="flex-1 cursor-pointer bg-[#25D366] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
-                        onClick={() => setQuoteDialogOpen(false)}
-                      >
-                        <FaWhatsapp className="mr-2" /> WhatsApp
-                      </button>
-                    </div>
-                  </>
-                ) : (
-                  <div className="">
-                    <button className="text-[#254168] pb-8" onClick={() => setShowEmailForm(false)}>
-                      <FaArrowLeft className="cursor-pointer" />
-                    </button>
-                    <h2 className="text-xl font-bold text-[#254168] mb-4">Formulario de Cotización</h2>
-                    <form onSubmit={handleFormSubmit} className="space-y-4 animate-accordion-down">
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Nombre"
-                        className="w-full p-2 border rounded"
-                        required
-                      />
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="Correo Electrónico"
-                        className="w-full p-2 border rounded"
-                        required
-                      />
-                      <div className="flex gap-2">
-                        <input
-                          type="number"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          placeholder="Teléfono"
-                          className="w-full p-2 border rounded"
-                        />
-                        <input
-                          type="number"
-                          name="ruc"
-                          value={formData.ruc}
-                          onChange={handleInputChange}
-                          placeholder="Numero Ruc"
-                          className="w-full p-2 border rounded"
-                        />
+          {quoteDialogOpen && (
+            <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+              <div className="w-[85%]">
+                <div className="bg-white rounded-lg p-6 max-w-md w-full relative animate-accordion-down m-auto">
+                  {/* Botón de cerrar */}
+                  <button
+                    className="absolute top-6 right-6 text-[#254168] text-xl cursor-pointer"
+                    onClick={() => setQuoteDialogOpen(false)}
+                    aria-label="Cerrar"
+                  >
+                    <FaTimes />
+                  </button>
+                  {!showEmailForm ? (
+                    <>
+                      <h2 className="text-xl font-extrabold uppercase text-[#254168] mb-3">Solicitar Cotización</h2>
+                      <p className="mb-6 text-gray-600 text-[15px] font-semibold">{selectedProduct && `Deseo cotizar "${selectedProduct}" por:`}</p>
+                      <div className="flex gap-4">
+                        <button
+                          className="flex-1 cursor-pointer bg-[#254168] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
+                          onClick={() => setShowEmailForm(true)}
+                        >
+                          <FaEnvelope className="mr-2" /> Correo
+                        </button>
+                        <button
+                          className="flex-1 cursor-pointer bg-[#25D366] text-white p-2 rounded flex items-center justify-center transition-all hover:scale-105"
+                          onClick={handleWhatsAppClick}
+                        >
+                          <FaWhatsapp className="mr-2" /> WhatsApp
+                        </button>
                       </div>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder={`Mensaje sobre ${selectedProduct}`}
-                        className="w-full p-2 border rounded"
-                        rows="4"
-                        required
-                      ></textarea>
-                      <button type="submit" className="bg-[#f9cb21] text-[#254168] font-bold p-2 w-full flex items-center justify-center rounded transition-transform hover:scale-105">
-                        <FaPaperPlane className="mr-2" /> Enviar
+                    </>
+                  ) : (
+                    <div className="">
+                      <button className="text-[#254168] pb-8" onClick={() => setShowEmailForm(false)}>
+                        <FaArrowLeft className="cursor-pointer" />
                       </button>
-                    </form>
-                  </div>
-                )}
+                      <h2 className="text-xl font-bold text-[#254168] mb-4">Formulario de Cotización</h2>
+                      <form onSubmit={handleFormSubmit} className="space-y-4 animate-accordion-down">
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Nombre"
+                          className="w-full p-2 border rounded"
+                          required
+                        />
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="Correo Electrónico"
+                          className="w-full p-2 border rounded"
+                          required
+                        />
+                        <div className="flex gap-2">
+                          <input
+                            type="number"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            placeholder="Teléfono"
+                            className="w-full p-2 border rounded"
+                          />
+                          <input
+                            type="number"
+                            name="ruc"
+                            value={formData.ruc}
+                            onChange={handleInputChange}
+                            placeholder="Numero Ruc"
+                            className="w-full p-2 border rounded"
+                          />
+                        </div>
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          placeholder={`Mensaje sobre ${selectedProduct}`}
+                          className="w-full p-2 border rounded"
+                          rows="4"
+                          required
+                        ></textarea>
+                        <button type="submit" className="bg-[#f9cb21] text-[#254168] font-bold p-2 w-full flex items-center justify-center rounded transition-transform hover:scale-105">
+                          <FaPaperPlane className="mr-2" /> Enviar
+                        </button>
+                      </form>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
         </div>
       </div>
     </div>

@@ -72,27 +72,27 @@ const Header = () => {
             <div className="flex items-center gap-4">
               {/* Desktop Nav */}
               <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
-                <Link to="/" >
-                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Inicio</li>
-                </Link>
-                <Link to="/nosotros">
-                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Nosotros</li>
-                </Link>
-                <Link to="/productos">
-                  <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">Productos</li>
-                </Link>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
+                  <Link to="/" >Inicio</Link>
+                </li>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
+                  <Link to="/nosotros">Nosotros</Link>
+                </li>
+                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
+                  <Link to="/productos">Productos</Link>
+                </li>
                 <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
-                  <div className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">
-                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
-                    </Link>
-                    <Link to="Servicio-venta-de-repuestos-OEM">
-                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
-                    </Link>
-                    <Link to="Servicio-innovacion-y-tegnologia">
-                      <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
-                    </Link>
-                  </div>
+                  <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                    <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                      <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
+                    </li>
+                    <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                      <Link to="Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
+                    </li>
+                    <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                      <Link to="Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
 
@@ -125,29 +125,29 @@ const Header = () => {
                 />
               </div>
               <ul className="flex flex-col gap-4 p-4">
-                <Link to={"/"}>
-                  <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Inicio</li>
-                </Link>
-                <Link to={"/nosotros"}>
-                  <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Nosotros</li>
-                </Link>
-                <Link to={"/productos"}>
-                  <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">Productos</li>
-                </Link>
+                <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                  <Link to={"/"}>Inicio</Link>
+                </li>
+                <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                  <Link to={"/nosotros"}>Nosotros</Link>
+                </li>
+                <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                  <Link to={"/productos"}>Productos</Link>
+                </li>
 
                 <li className="p-3 text-[#254168] relative hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300 flex items-center gap-2" onClick={handleIsShowNavMobile}>
                   Servicios<IoIosArrowDown />
-                  <div className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">
-                      <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Mantenimineto integral de Maquinarias</li>
-                    </Link>
-                    <Link to="/Servicio-venta-de-repuestos-OEM">
-                      <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Venta de Repuestos OEM</li>
-                    </Link>
-                    <Link to="/Servicio-innovacion-y-tegnologia">
-                      <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">Innovación y tecnología</li>
-                    </Link>
-                  </div>
+                  <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                    <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                      <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
+                    </li>
+                    <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                      <Link to="/Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
+                    </li>
+                    <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                      <Link to="/Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
