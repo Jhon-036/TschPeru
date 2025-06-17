@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaCheck, FaArrowLeft, FaEnvelope, FaWhatsapp, FaPaperPlane, FaTimes } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
+import { CiFilter } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
 
 export default function Shoping() {
   // const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
@@ -16,6 +18,9 @@ export default function Shoping() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", ruc: "", message: "" });
+
+  const [setshowListCategorias, setSetshowListCategorias] = useState(false)
+  const [showModalCategoria, setShowModalCategoria] = useState(false);
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -77,22 +82,76 @@ export default function Shoping() {
     window.open(url, '_blank');
   };
 
+  const handleShowListCategoria = () => {
+    setSetshowListCategorias(!setshowListCategorias)
+  }
+
+  const handleToggleModalCategoria = () => {
+    setShowModalCategoria(!showModalCategoria);
+  };
+
   return (
     <div className="mt-16">
+
       <div className="relative bg-[url(/about-company.jpg)] h-[18rem] sm:h-[30rem] bg-center bg-no-repeat bg-cover">
         <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
           <h2 className="text-white text-[clamp(1.2rem,5vw,3rem)]">NUESTROS PRODUCTOS</h2>
         </div>
       </div>
+
+
+      {/* MODAL CATEGORIA MOVIL */}
+      <div className={`fixed z-50 bottom-0 left-0 right-0 w-full bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:hidden transition-all duration-300 ease-in-out transform ${showModalCategoria ? 'translate-y-0' : 'translate-y-full'}`}>
+        <div className="p-4">
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-end items-center h-[2rem]">
+              <IoMdClose
+                className="text-xl p-[2px] cursor-pointer"
+                onClick={handleToggleModalCategoria}
+              />
+            </div>
+            <button
+              className={`w-full cursor-pointer justify-start p-1.5 text-[16px] rounded-lg border ${!categoriaSeleccionada ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
+              onClick={() => {
+                setCategoriaSeleccionada(null);
+                setShowModalCategoria(false); // Cierra el modal al seleccionar
+              }}
+            >
+              Todos
+              {!categoriaSeleccionada && <FaCheck className="ml-2 inline" />}
+            </button>
+            {categorias.map((categoria) => (
+              <button
+                key={categoria}
+                className={`w-full cursor-pointer justify-start p-1.5 text-[16px] rounded-lg border ${categoriaSeleccionada === categoria ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
+                onClick={() => {
+                  setCategoriaSeleccionada(categoria);
+                  setSearchParams({ categoria });
+                  setShowModalCategoria(false); // Cierra el modal al seleccionar
+                }}
+              >
+                {categoria}
+                {categoriaSeleccionada === categoria && <FaCheck className="ml-2 inline" />}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-8">
-
         <div className="flex flex-col md:flex-row gap-6 my-11">
-
           {/* Categorías  */}
           <div className="block shrink-0">
             <div className="sticky top-44">
-              <h2 className="text-xl font-semibold text-[#254168]">Categorías</h2>
-              <div className="space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-8 md:flex md:flex-col">
+              <div className="max-md:visible md:hidden flex justify-center font-semibold">
+                <button
+                  className="text-[#254168] border rounded p-2.5 bg-white w-full flex items-center gap-2"
+                  onClick={handleToggleModalCategoria}
+                >
+                  <CiFilter className="text-xl" />Filtrar Categorias</button>
+              </div>
+              <h2 className="text-xl font-semibold text-[#254168] max-md:hidden">Categorías</h2>
+              <div className="space-y-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-8 md:flex md:flex-col max-md:hidden md:visible">
                 <button
                   className={`w-full cursor-pointer justify-start p-2 rounded-lg border ${!categoriaSeleccionada ? 'bg-[#254168] text-white' : 'border-[#254168] text-[#254168]'}`}
                   onClick={() => setCategoriaSeleccionada(null)}
