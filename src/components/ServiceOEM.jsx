@@ -19,7 +19,7 @@ const ServiceOEM = () => {
               </ul>
             </div>
             <h2 className="text-xl text-[#254168] font-bold">Brindamos :</h2>
-            <div className="text-xl font-light text-gray-700 pl-6">
+            <div className="text-xl font-light text-gray-700 pl-3">
               <p className="font-semibold">Expertise Técnico:</p>
               <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
                 <li className="list-disc">Asesoría personalizada para identificar exactamente lo que tu equipo necesita</li>
@@ -30,7 +30,7 @@ const ServiceOEM = () => {
                 <li className="list-disc">Entrega rápida para minimizar tiempos de parada</li>
                 <li className="list-disc">Precios competitivos sin sacrificar calidad</li>
               </ul>
-              <p className="font-semibold pt-6">Repuestos dirigidoa para sectores como:</p>
+              <p className="font-semibold pt-6">Repuestos dirigidos para sectores como:</p>
               <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
                 <li className="list-disc font-semibold pt-6">Minería</li>
                 <p className="pl-6">Excavadoras, perforadoras, volquetes</p>

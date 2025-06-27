@@ -44,7 +44,7 @@ const ShopMain = () => {
   }, []);
 
   const featuredCategories = [
-    { name: "Componentes hidraulicos", image: "/com-hidraulico-inicio.png" },
+    { name: "Componentes hidraulicos", image: "/com-hidraulico-inicio.jpeg" },
     { name: "Portacontenedores", image: "/portacontenedores-inicio.png" },
     { name: "Transmisiones", image: "/transmision-inicio.png" },
     { name: "Motores", image: "/motor-inicio.png" },
@@ -116,6 +116,7 @@ const ShopMain = () => {
                   className="relative w-full aspect-square bg-cover bg-center bg-no-repeat transition-transform duration-300 hover:scale-105 cursor-pointer shadow-md"
                   style={{ backgroundImage: `url(${category.image})` }}
                 >
+                  <img src={`${category.image}`} className="w-full h-full object-cover" alt="" />
                   <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#f9cb21] text-white text-center">
                     <h2 className="font-semibold text-[clamp(1rem,2vw,1.2rem)]">{category.name}</h2>
                   </div>
