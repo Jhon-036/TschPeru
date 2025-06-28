@@ -3,9 +3,9 @@ import BarraAmarillo from "./BarraAmarillo"
 const ServiceOEM = () => {
   return (
     <div className="mt-16">
-        <div className="relative bg-[url(/somos--tsch.avif)] h-[30rem] bg-center bg-no-repeat bg-cover">
+        <div className="relative bg-[url(/servicio-repuestos.jpeg)] h-[35rem] bg-center bg-no-repeat bg-cover">
             <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
-                <h2 className="text-white font-bold text-[clamp(1.8rem,5vw,3rem)] text-center">Venta de Repuestos OEM</h2>
+                <h2 className="text-white font-bold text-[clamp(1.8rem,5vw,3rem)] text-center uppercase">Venta de Repuestos OEM</h2>
             </div>
         </div>
         <article className="w-[85%] justify-center max-w-7xl mx-auto py-44 mt-8 m-auto flex flex-col gap-8">

@@ -64,7 +64,7 @@ const Header = () => {
             {/* Logo */}
             <Link to={'/'}>
               <div data-aos="fade-down">
-                <img src="/tsch--logo.jpeg" className="h-8 sm:h-[60px] cursor-pointer object-contain" alt="Tesch Peru Logo" />
+                <img src="/tsch--logo.webp" className="h-8 sm:h-[60px] cursor-pointer object-contain" alt="Tesch Peru Logo" />
               </div>
             </Link>
 

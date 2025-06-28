@@ -237,6 +237,9 @@ const ShopMain = () => {
               <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
                 <img src="/volvo.png" className="w-full" alt="tsch-volvo" />
               </div>
+              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
+                <img src="/parker.png" className="w-full" alt="tsch-volvo" />
+              </div>
             </div>
           </div>
         </div>

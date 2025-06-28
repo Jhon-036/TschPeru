@@ -37,7 +37,7 @@ const Servicios = () => {
             onClick={() => navigate(`/${service.url}`)}
           >
             <div className="w-full h-full bg-black/40 flex justify-center items-center text-center rounded-md">
-              <p className="p-2 text-xl sm:text-2xl text-white font-bold">{service.title}</p>
+              <p className="p-2 text-xl sm:text-2xl text-white font-bold uppercase">{service.title}</p>
             </div>
           </div>
         ))}
