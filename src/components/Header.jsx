@@ -3,159 +3,181 @@ import { FaBars, FaYoutube } from "react-icons/fa"
 import { IoCloseSharp, IoLogoTiktok } from "react-icons/io5"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FiPhone } from "react-icons/fi"
 import { BiLogoFacebook, BiLogoInstagramAlt } from "react-icons/bi"
 import { IoIosArrowDown } from "react-icons/io"
 
 const Header = () => {
-  const [isShowNav, setIsShowNav] = useState(false)
-  const [isShowNavMovile, setIsShowNavMovile] = useState(false)
+   const [isShowNav, setIsShowNav] = useState(false)
+   const [isShowNavMovile, setIsShowNavMovile] = useState(false)
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, [])
+   const navigate = useNavigate()
 
-  const handleIsShowNav = () => {
-    setIsShowNav(!isShowNav)
-  }
+   const handleContactClick = () => {
+    if (window.location.pathname !== "/") {
+      // Si NO estamos en la página de inicio, navegamos primero
+      navigate("/");
+      // Usamos un pequeño retraso para asegurar que la página cargue
+      setTimeout(() => {
+        scrollToContact();
+      }, 100); // Ajusta este tiempo si es necesario
+    } else {
+      // Si YA estamos en la página de inicio, hacemos scroll directamente
+      scrollToContact();
+    }
+  };
 
-  const handleIsShowNavMobile = () => {
-    setIsShowNavMovile(!isShowNavMovile)
-  }
+   useEffect(() => {
+      AOS.init({
+         duration: 1000,
+         once: true,
+      });
+   }, [])
 
-  const handleNotShowNav = () => {
-    setIsShowNav(false)
-  }
+   const handleIsShowNav = () => {
+      setIsShowNav(!isShowNav)
+   }
 
-  return (
-    <header className="w-full  shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
-      <div className="bg-[#f9cb21] p-[4px] flex justify-evenly items-center">
-        <div className="">
-          <a href='tel:951758040' className="flex items-center space-x-3 cursor-pointer">
-            <FiPhone className="h-5 w-5 text-[#254168]" />
-            <span className="text-[#254168] text-md font-bold">+51 951 758 040</span>
-          </a>
-        </div>
-        <div>
-          <div className="flex gap-2">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
-              <BiLogoInstagramAlt className="text-sm md:text-[18px] cursor-pointer" />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
-              <BiLogoFacebook className="text-sm md:text-[18px] cursor-pointer" />
-            </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
-              <FaYoutube className="text-sm md:text-[18px] cursor-pointer" />
-            </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
-              <IoLogoTiktok className="text-sm md:text-[18px] cursor-pointer" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center">
-        <nav className="w-[85%] max-w-7xl mx-auto">
-          <div className="flex w-full justify-between items-center py-4  gap-4">
+   const handleIsShowNavMobile = () => {
+      setIsShowNavMovile(!isShowNavMovile)
+   }
 
-            {/* Logo */}
-            <Link to={'/'}>
-              <div data-aos="fade-down">
-                <img src="/tsch--logo.webp" className="h-8 sm:h-[60px] cursor-pointer object-contain" alt="Tesch Peru Logo" />
-              </div>
-            </Link>
+   const handleNotShowNav = () => {
+      setIsShowNav(false)
+   }
 
-            {/* Desktop + Mobile Menu */}
-            <div className="flex items-center gap-4">
-              {/* Desktop Nav */}
-              <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
-                  <Link to="/" >Inicio</Link>
-                </li>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
-                  <Link to="/nosotros">Nosotros</Link>
-                </li>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
-                  <Link to="/productos">Productos</Link>
-                </li>
-                <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
-                  <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                    <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                      <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
-                    </li>
-                    <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                      <Link to="Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
-                    </li>
-                    <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                      <Link to="Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-
-              {/* Contact Button */}
-              <button className="uppercase p-2 lg:px-5 lg:py-3 bg-[#f9cb21] text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
-                <span>Contáctenos</span>
-              </button>
-
-              {/* Mobile Menu Icon */}
-              <div className="md:hidden hover:bg-gray-100 p-2 rounded-xl cursor-pointer" onClick={handleIsShowNav} data-aos="fade-down" data-aos-delay="400">
-                <FaBars className="text-xl text-[#254168]" />
-              </div>
+   const scrollToContact = () => {
+      const contactoSection = document.getElementById('contactos-home');
+      if (contactoSection) {
+         contactoSection.scrollIntoView({ behavior: 'smooth' });
+      }
+   }
+      return (
+         <header className="w-full  shadow-md fixed top-0 z-50 bg-white backdrop-blur-md">
+            <div className="bg-[#f9cb21] p-[4px] flex justify-evenly items-center">
+               <div className="">
+                  <a href='tel:951758040' className="flex items-center space-x-3 cursor-pointer">
+                     <FiPhone className="h-5 w-5 text-[#254168]" />
+                     <span className="text-[#254168] text-md font-bold">+51 951 758 040</span>
+                  </a>
+               </div>
+               <div>
+                  <div className="flex gap-2">
+                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+                        <BiLogoInstagramAlt className="text-sm md:text-[18px] cursor-pointer" />
+                     </a>
+                     <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+                        <BiLogoFacebook className="text-sm md:text-[18px] cursor-pointer" />
+                     </a>
+                     <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+                        <FaYoutube className="text-sm md:text-[18px] cursor-pointer" />
+                     </a>
+                     <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bg-[#254168] text-[#eee] rounded-[50%] p-1 md:p-1.5 hover:bg-[#1e3a56] list-none">
+                        <IoLogoTiktok className="text-sm md:text-[18px] cursor-pointer" />
+                     </a>
+                  </div>
+               </div>
             </div>
-          </div>
+            <div className="flex items-center">
+               <nav className="w-[85%] max-w-7xl mx-auto">
+                  <div className="flex w-full justify-between items-center py-4  gap-4">
 
-          {/* Mobile Nav Overlay */}
-          <div
-            className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
-            onClick={handleNotShowNav}
-          >
-            <div
-              className={`absolute top-0 left-0 w-[80%] max-w-xs bg-white h-screen shadow-lg transition-transform duration-300 ${isShowNav ? "translate-x-0" : "-translate-x-full"}`}
-              onClick={(e) => e.stopPropagation()}
-            >
+                     {/* Logo */}
+                     <Link to={'/'}>
+                        <div data-aos="fade-down">
+                           <img src="/tsch--logo.webp" className="h-8 sm:h-[60px] cursor-pointer object-contain" alt="Tesch Peru Logo" />
+                        </div>
+                     </Link>
 
-              <div className="flex justify-end p-5">
-                <IoCloseSharp
-                  className="text-2xl text-[#254168] cursor-pointer hover:text-gray-900 transition-colors duration-300"
-                  onClick={handleNotShowNav}
-                />
-              </div>
-              <ul className="flex flex-col gap-4 p-4">
-                <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
-                  <Link to={"/"}>Inicio</Link>
-                </li>
-                <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
-                  <Link to={"/nosotros"}>Nosotros</Link>
-                </li>
-                <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
-                  <Link to={"/productos"}>Productos</Link>
-                </li>
+                     {/* Desktop + Mobile Menu */}
+                     <div className="flex items-center gap-4">
+                        {/* Desktop Nav */}
+                        <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
+                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
+                              <Link to="/" >Inicio</Link>
+                           </li>
+                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
+                              <Link to="/nosotros">Nosotros</Link>
+                           </li>
+                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
+                              <Link to="/productos">Productos</Link>
+                           </li>
+                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
+                              <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                 <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
+                                 </li>
+                                 <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                                    <Link to="Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
+                                 </li>
+                                 <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                                    <Link to="Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
 
-                <li className="p-3 text-[#254168] relative hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300 flex items-center gap-2" onClick={handleIsShowNavMobile}>
-                  Servicios<IoIosArrowDown />
-                  <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                    <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                      <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
-                    </li>
-                    <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                      <Link to="/Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
-                    </li>
-                    <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                      <Link to="/Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                        {/* Contact Button */}
+                        <button onClick={handleContactClick} className="uppercase p-2 lg:px-5 lg:py-3 bg-[#f9cb21] text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-[#f9bf21] transition-colors duration-300" data-aos="fade-down" data-aos-delay="300">
+                           <span>Contáctenos</span>
+                        </button>
+
+                        {/* Mobile Menu Icon */}
+                        <div className="md:hidden hover:bg-gray-100 p-2 rounded-xl cursor-pointer" onClick={handleIsShowNav} data-aos="fade-down" data-aos-delay="400">
+                           <FaBars className="text-xl text-[#254168]" />
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* Mobile Nav Overlay */}
+                  <div
+                     className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                     onClick={handleNotShowNav}
+                  >
+                     <div
+                        className={`absolute top-0 left-0 w-[80%] max-w-xs bg-white h-screen shadow-lg transition-transform duration-300 ${isShowNav ? "translate-x-0" : "-translate-x-full"}`}
+                        onClick={(e) => e.stopPropagation()}
+                     >
+
+                        <div className="flex justify-end p-5">
+                           <IoCloseSharp
+                              className="text-2xl text-[#254168] cursor-pointer hover:text-gray-900 transition-colors duration-300"
+                              onClick={handleNotShowNav}
+                           />
+                        </div>
+                        <ul className="flex flex-col gap-4 p-4">
+                           <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                              <Link to={"/"}>Inicio</Link>
+                           </li>
+                           <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                              <Link to={"/nosotros"}>Nosotros</Link>
+                           </li>
+                           <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                              <Link to={"/productos"}>Productos</Link>
+                           </li>
+
+                           <li className="p-3 text-[#254168] relative hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300 flex items-center gap-2" onClick={handleIsShowNavMobile}>
+                              Servicios<IoIosArrowDown />
+                              <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                 <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
+                                 </li>
+                                 <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
+                                 </li>
+                                 <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </nav>
             </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-  )
-}
+         </header>
+      )
+   }
 
-export default Header
+   export default Header
