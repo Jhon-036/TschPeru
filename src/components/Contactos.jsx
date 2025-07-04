@@ -52,7 +52,7 @@ const Contactos = () => {
                                 </div>
                                 <div>
                                     <p className="text-[#254168] text-[clamp(1rem,2vw,1.125rem)]">Correo electrónico</p>
-                                    <span className="text-gray-600">tschperuv@tschperuv.com</span>
+                                    <span className="text-gray-600">tschperuv@outlook.com</span>
                                 </div>
                             </div>
                             {/* Dirección */}
