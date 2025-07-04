@@ -24,9 +24,9 @@ const Servicios = () => {
 
       <div className="mt-8 xl:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 xl:gap-8">
         {[
-          { image: '/service--installation.jpg', title: 'Mantenimiento integral de Maquinarias', url: 'Servicio-mantenimiento-integral-de-maquinarias' },
-          { image: '/service--mantenim.jpg', title: 'Venta de Repuestos OEM', url: 'Servicio-venta-de-repuestos-OEM' },
-          { image: '/service--consulting.jpg', title: 'Innovación y tecnología', url: 'Servicio-innovacion-y-tegnologia' },
+          { image: '/servicio-mantenimiento.jpeg', title: 'Mantenimiento integral de Maquinarias', url: 'Servicio-mantenimiento-integral-de-maquinarias' },
+          { image: '/servicio-repuestos.jpeg', title: 'Venta de Repuestos OEM', url: 'Servicio-venta-de-repuestos-OEM' },
+          { image: '/servicio-innovacion.jpeg', title: 'Innovación y tecnología', url: 'Servicio-innovacion-y-tegnologia' },
         ].map((service, index) => (
           <div
             key={index}
