@@ -52,7 +52,20 @@ const Contactos = () => {
                                 </div>
                                 <div>
                                     <p className="text-[#254168] text-[clamp(1rem,2vw,1.125rem)]">Correo electrónico</p>
-                                    <span className="text-gray-600">tschperuv@outlook.com</span>
+                                    <span className="text-gray-600">ventas@tschperu.com</span>
+                                </div>
+                            </div>
+                            {/* Email */}
+                            <div className="flex items-center gap-4" 
+                            data-aos="fade-up" 
+                            data-aos-delay="300"
+                            >
+                                <div className="bg-[#f9cb21] p-3 rounded-full flex justify-center items-center">
+                                    <MdOutlineMail className="text-[#254168] font-bold text-xl sm:text-2xl" />
+                                </div>
+                                <div>
+                                    <p className="text-[#254168] text-[clamp(1rem,2vw,1.125rem)]">Correo electrónico</p>
+                                    <span className="text-gray-600">operaciones@tschperu.com</span>
                                 </div>
                             </div>
                             {/* Dirección */}

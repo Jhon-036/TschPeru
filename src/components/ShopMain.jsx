@@ -16,16 +16,18 @@ const ShopMain = () => {
 
   const handleQuoteClick = (productName) => {
     setSelectedProduct(productName);
-    setQuoteDialogOpen(true);
+    setQuoteDialogOpen(true); // Abre el modal
     setShowEmailForm(false);
   };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     alert("Formulario enviado con éxito");
-    setQuoteDialogOpen(false);
-    setShowEmailForm(false);
+    setQuoteDialogOpen(false); // Cierra el modal
+    setShowEmailForm(false); // Asegura que el formulario de correo no se vea
     setFormData({ name: "", email: "", phone: "", ruc: "", message: "" });
   };
+
   const handleWhatsAppClick = () => {
     if (!selectedProduct) return;
     const telefono = "51951758040";
@@ -80,7 +82,6 @@ const ShopMain = () => {
   return (
     <div className="">
       <div className="w-[85%] max-w-7xl mx-auto py-8 mt-8 m-auto">
-
         {/* Título principal */}
         <div data-aos="fade-up">
           <h2 className="text-[#254168] text-center font-bold text-[clamp(1.5rem,5vw,3.2rem)]">
@@ -123,10 +124,8 @@ const ShopMain = () => {
                 </div>
               </Link>
             ))}
-
           </div>
         </div>
-
 
         {/* Productos Destacados */}
         <div className="mt-12" data-aos="fade-up">
@@ -140,7 +139,7 @@ const ShopMain = () => {
               </p>
             </Link>
           </div>
-          <div className="flex  justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
+          <div className="flex justify-between overflow-x-auto scrollbar-hide gap-4 py-4 px-[1px]">
             {featuredParts.map((part, index) => (
               <div key={index} className="flex-shrink-0 w-[288px] rounded shadow-md">
                 <div className="w-full aspect-square relative">
@@ -168,82 +167,10 @@ const ShopMain = () => {
               </div>
             ))}
           </div>
-
         </div>
-
       </div>
 
-      {/* Marcas */}
-      <section className="w-full bg-white pb-10">
-        <div className="w-[85%] max-w-7xl mx-auto py-10">
-          <h2 className="text-center text-3xl text-[#254168] font-semibold">Nuestras Marcas</h2>
-          <p className="text-center mt-2.5 text-[18px]">Trabajamos con las mejores marcas del mercado para garantizar la calidad y confiabilidad de todos nuestros productos y servicios.</p>
-        </div>
-        <div className="py-10 overflow-x-auto w-[85%] max-w-7xl m-auto flex flex-col gap-2">
-          <div className="flex gap-8 w-[85%] max-w-7xl">
-            <div className="flex gap-2 min-w-max"> {/* Aquí hemos aplicado min-w-max para evitar que las imágenes se recorten o se ajusten en pantallas pequeñas */}
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/atos.png" className="w-full" alt="tsch-atos" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/cat.png" className="w-full" alt="tsch-cat" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/danfoss.png" className="w-full" alt="tsch-danfoss" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/hyundai.png" className="w-full" alt="tsch-hyundai" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/hyster.png" className="w-full" alt="tsch-hyster" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/kalmar.png" className="w-full" alt="tsch-kalmar" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/komatsu.png" className="w-full" alt="tsch-komatsu" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/konecranes.png" className="w-full" alt="tsch-konecranes" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/liebherr.png" className="w-full" alt="tsch-liebherr" />
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-8 w-[85%] max-w-7xl">
-            <div className="flex gap-2 min-w-max"> {/* Igualmente aquí */}
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/pyf.png" className="w-full" alt="tsch-p&f" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/rexroth.png" className="w-full" alt="tsch-rexroth&f" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/sennebogen.png" className="w-full" alt="tsch-sennebogen" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/spicer.png" className="w-full" alt="tsch-spicer" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/sun-hidraulics.png" className="w-full" alt="tsch-sun-hidraulics" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/terex.png" className="w-full" alt="tsch-terex" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/toyota.png" className="w-full" alt="tsch-toyota" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/volvo.png" className="w-full" alt="tsch-volvo" />
-              </div>
-              <div className="w-[8.4rem] rounded bg-[#eee] flex flex-col justify-center items-center object-contain p-4">
-                <img src="/parker.png" className="w-full" alt="tsch-volvo" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Modal de cotización */}
       <ModalCotizacion
         open={quoteDialogOpen}
         onClose={() => setQuoteDialogOpen(false)}

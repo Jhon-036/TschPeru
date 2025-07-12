@@ -20,7 +20,7 @@ const ServiceOEM = () => {
             </div>
             <h2 className="text-xl text-[#254168] font-bold">Brindamos :</h2>
             <div className="text-xl font-light text-gray-700 pl-3">
-              <p className="font-semibold">Expertise Técnico:</p>
+              <p className="font-semibold">Experiencia técnica:</p>
               <ul className="text-lg md:text-xl font-light text-gray-700 pl-6">
                 <li className="list-disc">Asesoría personalizada para identificar exactamente lo que tu equipo necesita</li>
                 <li className="list-disc">Conocimiento especializado en marcas como CAT, Kalmar,Hyster, Cummins, Dana y más</li>

@@ -94,25 +94,25 @@ const Header = () => {
                      <div className="flex items-center gap-4">
                         {/* Desktop Nav */}
                         <ul className="hidden md:flex gap-6" data-aos="fade-down" data-aos-delay="200">
-                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
-                              <Link to="/" >Inicio</Link>
+                           <li className=" text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 grid items-center">
+                              <Link to="/" className="p-3">Inicio</Link>
                            </li>
-                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
-                              <Link to="/nosotros">Nosotros</Link>
+                           <li className=" text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 grid items-center">
+                              <Link to="/nosotros" className="p-3">Nosotros</Link>
                            </li>
-                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300">
-                              <Link to="/productos">Productos</Link>
+                           <li className=" text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 grid items-center">
+                              <Link to="/productos" className="p-3">Productos</Link>
                            </li>
-                           <li className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
+                           <li className=" p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-2xl sm:text-base transition-colors duration-300 flex gap-1 items-center relative" onClick={handleIsShowNav}>Servicios<IoIosArrowDown />
                               <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto transition-opacity ${isShowNav ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                                 <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
+                                 <li className="cursor-pointer hover:bg-gray-100 rounded-lg grid items-center">
+                                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias" className="px-2 py-1">Mantenimineto integral de Maquinarias</Link>
                                  </li>
-                                 <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                                    <Link to="Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
+                                 <li className="cursor-pointer  hover:bg-gray-100 rounded-lg grid items-center">
+                                    <Link to="Servicio-venta-de-repuestos-OEM" className="px-2 py-1">Venta de Repuestos OEM</Link>
                                  </li>
-                                 <li className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                                    <Link to="Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
+                                 <li className="cursor-pointer  hover:bg-gray-100 rounded-lg grid items-center">
+                                    <Link to="Servicio-innovacion-y-tegnologia" className="px-2 py-1">Innovación y tecnología</Link>
                                  </li>
                               </ul>
                            </li>
@@ -147,27 +147,27 @@ const Header = () => {
                            />
                         </div>
                         <ul className="flex flex-col gap-4 p-4">
-                           <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
-                              <Link to={"/"}>Inicio</Link>
+                           <li onClick={handleNotShowNav} className="grid items-center text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                              <Link to={"/"} className="p-3">Inicio</Link>
                            </li>
-                           <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
-                              <Link to={"/nosotros"}>Nosotros</Link>
+                           <li onClick={handleNotShowNav} className="grid items-center text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                              <Link to={"/nosotros"} className="p-3">Nosotros</Link>
                            </li>
-                           <li onClick={handleNotShowNav} className="p-3 text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
-                              <Link to={"/productos"}>Productos</Link>
+                           <li onClick={handleNotShowNav} className="grid items-center text-[#254168] hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300">
+                              <Link to={"/productos"} className="p-3">Productos</Link>
                            </li>
 
                            <li className="p-3 text-[#254168] relative hover:bg-gray-100 cursor-pointer rounded-lg text-xl transition-colors duration-300 flex items-center gap-2" onClick={handleIsShowNavMobile}>
                               Servicios<IoIosArrowDown />
                               <ul className={`bg-white absolute top-12 p-4 w-[250px] grid gap-2.5 cursor-auto ${isShowNavMovile ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-                                 <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias">Mantenimineto integral de Maquinarias</Link>
+                                 <li onClick={handleNotShowNav} className="cursor-pointer grid items-center hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-mantenimiento-integral-de-maquinarias" className=" px-2 py-1">Mantenimineto integral de Maquinarias</Link>
                                  </li>
-                                 <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                                    <Link to="/Servicio-venta-de-repuestos-OEM">Venta de Repuestos OEM</Link>
+                                 <li onClick={handleNotShowNav} className="cursor-pointer grid items-center hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-venta-de-repuestos-OEM" className=" px-2 py-1">Venta de Repuestos OEM</Link>
                                  </li>
-                                 <li onClick={handleNotShowNav} className="cursor-pointer px-2 py-1 hover:bg-gray-100 rounded-lg">
-                                    <Link to="/Servicio-innovacion-y-tegnologia">Innovación y tecnología</Link>
+                                 <li onClick={handleNotShowNav} className="cursor-pointer grid items-center hover:bg-gray-100 rounded-lg">
+                                    <Link to="/Servicio-innovacion-y-tegnologia" className=" px-2 py-1">Innovación y tecnología</Link>
                                  </li>
                               </ul>
                            </li>

@@ -6,14 +6,21 @@ html {
 
 body {
     background-color: #f7f7f7ee;
+    top: 0 !important;
 }
 
-/* html, body {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-   */
+/* Ocultar el texto de copyright y el banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
 
-/* .flex-start-end {
-    justify-content: flex-end; 
-} */
+
+/* Ocultar el texto "Translations by Google" */
+.goog-logo-link {
+  display: none !important;
+}
+
+/* Ocultar el texto "About Google Translate" */
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+}
