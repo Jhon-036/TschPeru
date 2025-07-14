@@ -77,7 +77,7 @@ const Contactos = () => {
                                 </div>
                                 <div>
                                     <p className="text-[#254168] text-[clamp(1rem,2vw,1.125rem)]">Dirección</p>
-                                    <span className="text-gray-600">Lima, Lima, Perú</span>
+                                    <span className="text-gray-600">Lima, Perú</span>
                                 </div>
                             </div>
                         </div>

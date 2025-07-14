@@ -82,7 +82,7 @@ const Footer = () => {
                   <ul className="space-y-3 text-[clamp(0.9rem,2vw,1rem)]">
                      <li className="flex items-start space-x-3">
                         <FiMapPin className="h-5 w-5 text-[#254168] shrink-0 mt-1" />
-                        <span className="text-[#254168]">Lima, Lima, Perú</span>
+                        <span className="text-[#254168]">Lima, Perú</span>
                      </li>
                      <a href='tel:951758040' className="flex items-center space-x-3">
                         <FiPhone className="h-5 w-5 text-[#254168]" />
@@ -90,7 +90,7 @@ const Footer = () => {
                      </a>
                      <a href="mailto:operaciones@tschperu.com" className="flex items-center space-x-3">
                         <FiMail className="h-5 w-5 text-[#254168]" />
-                        <span className="text-[#254168]">operaciones@tschperu.com</span>
+                        <span className="text-[#254168]">ventas@tschperu.com</span>
                      </a>
                   </ul>
                </div>

@@ -17,7 +17,7 @@ const FormContactos = () => {
       const message = form.current.user_message.value;
 
       // Si algún campo está vacío, mostrar un mensaje de error
-      if (!name || !email || !tel || !ruc || !message) {
+      if (!name || !email || !tel || !message) {
          alert("Por favor, completa todos los campos del formulario.");
          return; // Detener la ejecución si hay campos vacíos
       }
@@ -72,7 +72,6 @@ const FormContactos = () => {
                <div className="flex flex-col w-full">
                   <label htmlFor="" className="text-[#254168] sm:text-[18px]">Ruc :</label>
                   <input
-                     required
                      type="number"
                      placeholder="Numero de ruc"
                      name="user_ruc"
