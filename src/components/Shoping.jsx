@@ -310,18 +310,28 @@ export default function Shoping() {
                                           <label htmlFor="" className="text-[#254168] sm:text-[16px]">Teléfono :</label>
                                           <input
                                              required
-                                             type="number"
+                                             min={0}
+                                             step={1}
+                                             max={999999999}
+                                             type="text"
+                                             maxLength={9}
+                                             pattern="\d{9}"
                                              placeholder="Tu numero"
                                              name="user_tel"
+                                             onInput={(e) => e.target.value = e.target.value.replace(/[^0-9]/g, "")}
                                              className="border-[1px] w-full text-[16px] text-gray-600 px-2 py-1 rounded-sm border-[#254168]/25" />
                                        </div>
                                        <div className="flex flex-col w-full">
                                           <label htmlFor="" className="text-[#254168] sm:text-[16px]">RUC o DNI :</label>
                                           <input
-                                             required
-                                             type="number"
-                                             placeholder="Numero de ruc"
+                                             min={0}
+                                             max={99999999999}
+                                             type="text"
+                                             maxLength={11}
+                                             pattern="\d{11}"
+                                             placeholder="Numero de ruc o dni"
                                              name="user_ruc"
+                                             onInput={(e) => e.target.value = e.target.value.replace(/[^0-9]/g, "")}
                                              className="border-[1px] w-full text-[16px] text-gray-600 px-2 py-1 rounded-sm border-[#254168]/25" />
                                        </div>
                                     </div>
