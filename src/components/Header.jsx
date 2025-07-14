@@ -56,7 +56,10 @@ const Header = () => {
    const scrollToContact = () => {
       const contactoSection = document.getElementById('contactos-home');
       if (contactoSection) {
-         contactoSection.scrollIntoView({ behavior: 'smooth' });
+         contactoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+         setTimeout(() => {
+            window.scrollBy(0, -50); // Ajusta el desplazamiento si es necesario
+         }, 570); // Espera un poco para que el scroll se complete
       }
    }
    return (
