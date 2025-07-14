@@ -73,7 +73,7 @@ export default function Shoping() {
       const product = form.current.user_prod.value;
 
       // Si algún campo está vacío, mostrar un mensaje de error
-      if (!name || !email || !tel || !ruc || !message || !product) {
+      if (!name || !email || !tel || !message || !product) {
          alert("Por favor, completa todos los campos del formulario.");
          return; // Detener la ejecución si hay campos vacíos
       }
@@ -316,7 +316,7 @@ export default function Shoping() {
                                              className="border-[1px] w-full text-[16px] text-gray-600 px-2 py-1 rounded-sm border-[#254168]/25" />
                                        </div>
                                        <div className="flex flex-col w-full">
-                                          <label htmlFor="" className="text-[#254168] sm:text-[16px]">Ruc :</label>
+                                          <label htmlFor="" className="text-[#254168] sm:text-[16px]">RUC o DNI :</label>
                                           <input
                                              required
                                              type="number"
