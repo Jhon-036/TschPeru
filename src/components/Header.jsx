@@ -58,8 +58,8 @@ const Header = () => {
       if (contactoSection) {
          contactoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
          setTimeout(() => {
-            window.scrollBy(0, -35); // Ajusta el desplazamiento si es necesario
-         }, 570); // Espera un poco para que el scroll se complete
+            window.scrollBy(0, -40); // Ajusta el desplazamiento si es necesario
+         }, 580); // Espera un poco para que el scroll se complete
       }
    }
    return (
