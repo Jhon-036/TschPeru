@@ -111,7 +111,7 @@ export default function ModalCotizacion({
                                  className="border-[1px] w-full text-[16px] text-gray-600 px-2 py-1 rounded-sm border-[#254168]/25" />
                            </div>
                            <div className="flex flex-col w-full">
-                              <label htmlFor="" className="text-[#254168] sm:text-[16px]">Ruc :</label>
+                              <label htmlFor="" className="text-[#254168] sm:text-[16px]">RUC o DNI :</label>
                               <input
                                  type="number"
                                  placeholder="Numero de ruc"
