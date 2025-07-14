@@ -59,7 +59,7 @@ const Header = () => {
          contactoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
          setTimeout(() => {
             window.scrollBy(0, -40); // Ajusta el desplazamiento si es necesario
-         }, 580); // Espera un poco para que el scroll se complete
+         }, 590); // Espera un poco para que el scroll se complete
       }
    }
    return (
