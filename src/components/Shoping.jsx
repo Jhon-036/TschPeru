@@ -112,7 +112,7 @@ export default function Shoping() {
    return (
       <div className="mt-16">
 
-         <div className="relative bg-[url(/about-company.jpg)] h-[18rem] sm:h-[30rem] bg-center bg-no-repeat bg-cover">
+         <div className="relative bg-[url(/about-company-min.jpg)] h-[18rem] sm:h-[30rem] bg-center bg-no-repeat bg-cover">
             <div className="absolute w-full h-full flex items-center justify-center bg-black/35">
                <h2 className="text-white text-[clamp(1.2rem,5vw,3rem)]">NUESTROS PRODUCTOS</h2>
             </div>

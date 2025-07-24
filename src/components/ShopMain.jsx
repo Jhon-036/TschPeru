@@ -47,9 +47,9 @@ const ShopMain = () => {
 
   const featuredCategories = [
     { name: "Componentes hidraulicos", image: "/com-hidraulico-inicio.jpeg" },
-    { name: "Portacontenedores", image: "/portacontenedores-inicio.png" },
-    { name: "Transmisiones", image: "/transmision-inicio.png" },
-    { name: "Motores", image: "/motor-inicio.png" },
+    { name: "Portacontenedores", image: "/portacontenedores-inicio-min.png" },
+    { name: "Transmisiones", image: "/transmision-inicio-min.png" },
+    { name: "Motores", image: "/motor-inicio-min.png" },
   ];
 
   const featuredParts = [

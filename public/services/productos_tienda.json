@@ -399,5 +399,110 @@
       "descripcion": "Sistema anticolisión con radar y cámara de retroceso",
       "category": "Otros componentes",
       "image": "/kit-de-camara-y-sensor-anticosion.png"
+   },
+   {
+    "id": 58,
+    "nombre" : "KIT DE EXTRACTORES DE PINES",
+    "descripcion": "jrready",
+    "category" : "Componentes eléctricos",
+    "image": "/kit-de-extractores-de-pines.png"
+   },
+   {
+    "id": 59,
+    "nombre": "PORTAFUSIBLE 12 VIAS PA66GF15",
+    "descripcion": "littelfuse",
+    "category": "Componentes eléctricos",
+    "image": "/PORTAFUSIBLE-12-VIAS-PA66GF15.png"
+   },
+   {
+    "id": 60,
+    "nombre": "RELE DE ARRANQUE 24 V",
+    "descripcion": "delco remy",
+    "category": "Componentes eléctricos",
+    "image": "/RELE-DE-ARRANQUE-24-V.png"
+   },
+   {
+    "id": 61,
+    "nombre": "Presostato ajustable F4Z1M3",
+    "descripcion": "20 a 300BAR, IP65 NC/NA",
+    "category": "Componentes hidraulicos",
+    "image": "/presostato-1.png"
+   },
+   {
+    "id": 62,
+    "nombre": "Válvulas de control de flujo de aguja J02A2WV",
+    "descripcion": "PARKER 420BAR",
+    "category": "Componentes hidraulicos",
+    "image": "/VALVULA-PARKER.png"
+   },
+   {
+    "id": 63,
+    "nombre": "CABLE PARA SENSOR CON CONECTOR ACODADO HEMBRA M12",
+    "descripcion": "5 pines,2MT, IFM",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CABLE-PARA-SENSOR-CON-CONECTOR-ACODADO-HEMBRA-M12.png"
+   },
+   {
+    "id": 64,
+    "nombre": "CONECTOR DE VALVULA 6170300",
+    "descripcion": "Murr Electronic con cable de 3 metros",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CONECTOR-DE-VALVULA-6170300.png"
+   },
+   {
+    "id": 65,
+    "nombre": "CONECTOR HEMBRA 350720",
+    "descripcion": "9 VIAS TE Connectivity",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CONECTOR-HEMBRA-350720.png"
+   },
+   {
+    "id": 66,
+    "nombre": "CONECTOR HEMBRA 480710",
+    "descripcion": "15 VIAS TE Connectivity",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CONECTOR-HEMBRA-480710.png"
+   },
+   {
+    "id": 67,
+    "nombre": "CONECTOR INDUSTRIAL BASE ADOSADO 24P + PE",
+    "descripcion": "16A PG21, IP65 Degson",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CONECTOR-INDUSTRIAL-BASE-ADOSADO-24P-+-PE.png"
+   },
+   {
+    "id": 68,
+    "nombre": "CONECTOR MACHO 480711",
+    "descripcion": "15 VIAS - TE Connectivity",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CONECTOR-MACHO-480711.png"
+   },
+   {
+    "id": 69,
+    "nombre": "CONECTOR MACHO 770028",
+    "descripcion": "9 VIAS  TE Connectivity",
+    "category": "Conectores automotrices e industriales",
+    "image": "/CONECTOR-MACHO-770028.png"
+   },
+   {
+    "id": 70,
+    "nombre": "PINES 0926898",
+    "descripcion": "MATE-N-LOK 0,5-2,1mm²",
+    "category": "Conectores automotrices e industriales",
+    "image": "/PINES-0926898.png"
+   },
+   {
+    "id": 71,
+    "nombre": "SOCKET 0926893",
+    "descripcion": "MATE-N-LOK 0,5-2,1mm²",
+    "category": "Conectores automotrices e industriales",
+    "image": "/SOCKET-0926893.png"
+   },
+   {
+    "id": 72,
+    "nombre": "SOCKET 0926893",
+    "descripcion": "MATE-N-LOK 0,5-2,1mm²",
+    "category": "Conectores automotrices e industriales",
+    "image": "/SOCKET-0926893.png"
    }
 ]
