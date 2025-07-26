@@ -516,5 +516,26 @@
     "descripcion": "Repuestos de JOYSTICK - KALMAR",
     "category": "Portacontenedores",
     "image": "/POTENCIOMETRO-1.png"
+   },
+   {
+    "id": 75,
+    "nombre": "SENSOR DE NIVEL DE REFRIGERANTE 2872769",
+    "descripcion": "Cummins",
+    "category": "Motores",
+    "image": "/SENSOR-DE-NIVEL-DE-REFRIGERANTE-2872769.png"
+   },
+   {
+    "id": 76,
+    "nombre": "SENSOR DE NIVEL DE REFRIGERANTE 4383933",
+    "descripcion": "Cummins",
+    "category": "Motores",
+    "image": "/SENSOR-DE-NIVEL-DE-REFRIGERANTE-4383933.png"
+   },
+   {
+    "id": 77,
+    "nombre": "SENSOR-DE-NIVEL-DE-REGRIGERANTE-2030100057",
+    "descripcion": "Casco",
+    "category": "Motores",
+    "image": "/SENSOR-DE-NIVEL-DE-REGRIGERANTE-2030100057.png"
    }
 ]
